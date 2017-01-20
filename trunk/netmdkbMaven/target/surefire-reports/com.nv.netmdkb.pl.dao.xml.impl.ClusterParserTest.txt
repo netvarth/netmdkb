@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.nv.netmdkb.pl.dao.xml.impl.ClusterParserTest
--------------------------------------------------------------------------------
-Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.397 sec
