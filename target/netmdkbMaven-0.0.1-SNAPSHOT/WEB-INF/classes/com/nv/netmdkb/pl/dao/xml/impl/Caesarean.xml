@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clusters>
+    <!-- Delivery Type equals CS -->
+    <clusterSet>
+	
+			
+	        <id>1</id>
+		        <name>Caesarean</name>
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>typeOfDelivery</question>
+					         <edge>CS</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+</clusterSet>				
+	 <clusterSet>
+	
+			
+	        <id>2</id>
+		        <name>Not Entered</name>
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>typeOfDelivery</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+</clusterSet>							
+    
+</clusters>
+
+				

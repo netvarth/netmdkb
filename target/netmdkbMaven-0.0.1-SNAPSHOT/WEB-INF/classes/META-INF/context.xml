@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:aop="http://www.springframework.org/schema/aop"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:jee="http://www.springframework.org/schema/jee"
+   xmlns:tx="http://www.springframework.org/schema/tx" 
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+  http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
+  
+  
+  <bean id="context.config" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <!--default setting, overwritten by the content from location property-->
+        
+		<property name="locations">
+		<list>
+ 
+          <!--   <value>file:////ebs/apache-tomcat-8.0.36/conf/netmdkb.properties</value>  -->
+ 			<value>file:///C:/Installations/apache-tomcat-8.0.30/conf/netmdkb.properties</value> 
+		</list>
+		</property>
+		<property name="ignoreResourceNotFound" value="true" />
+		<property name="ignoreUnresolvablePlaceholders" value="false" />
+		<property name="searchSystemEnvironment" value="true" /> 
+   </bean>
+   
+  <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
+   
+  <bean id="persistenceUnitManager"
+		class="org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager">
+		<property name="persistenceXmlLocations">
+			<list>
+				<value>classpath:META-INF/persistence.xml</value>
+			</list>
+		</property>
+        <property name="defaultDataSource" ref="datasource.jndi"></property>
+    </bean>
+    
+  <bean id ="jpa.dialet" class="org.springframework.orm.jpa.vendor.HibernateJpaDialect"/>
+    
+  <bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="persistenceUnitManager" ref="persistenceUnitManager" />
+		<property name="persistenceUnitName" value="youNeverWaitPU" />
+		<property name="dataSource" ref="datasource.jndi" />
+		<property name="jpaDialect" ref ="jpa.dialet"/>
+         <property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="showSql" value="true" />
+			</bean>
+		</property>
+  </bean>
+     
+     
+ 
+  <bean id="transaction.manager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	    <property name="jpaDialect" ref ="jpa.dialet"/>
+  </bean>
+   	
+  <tx:annotation-driven transaction-manager="transaction.manager"/>    
+
+</beans>
+  
+ 
+  
+
+  
+
+  
+          

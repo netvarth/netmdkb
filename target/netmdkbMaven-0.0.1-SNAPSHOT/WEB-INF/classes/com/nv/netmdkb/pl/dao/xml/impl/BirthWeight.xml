@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clusters>
+
+ 	<!--  first cluster set baby weight <1500 -->
+	<clusterSet>
+	            <id>1</id>
+		        <name><![CDATA[<1500]]></name>
+
+				
+	    	<cluster>
+				    <id>1.1</id>
+					<name> Male </name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>male</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+				
+					       <rule>
+                          <predicate>lt</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>1500</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					      
+					 
+					</ruleSet>
+				</cluster>	
+				
+	 	
+	
+	
+		  	<cluster>
+				    <id>1.2</id>
+					<name> Female</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>female</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					
+					       <rule>
+                          <predicate>lt</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>1500</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					      
+					 
+					</ruleSet>
+				</cluster>	
+				
+				<cluster>
+				    <id>1.3</id>
+					<name>Ambiguous</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>Ambiguous</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					
+					       <rule>
+                          <predicate>lt</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>1500</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					      
+					 
+					</ruleSet>
+				</cluster>	
+				
+				<cluster>
+				    <id>1.4</id>
+					<name>Not Entered</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					
+					       <rule>
+                          <predicate>lt</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>1500</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					      
+					 
+					</ruleSet>
+				</cluster>	
+				
+	</clusterSet>
+	
+	<!-- second cluster baby weight BETWEEN 1500 AND 2499 -->
+	<clusterSet>
+	            <id>2</id>
+		        <name><![CDATA[1500-2499]]></name>
+		        
+				
+	    	<cluster>
+				    <id>2.1</id>
+					<name> Male </name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>male</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					
+					       <rule>
+                          <predicate>gteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>1500</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 </rule>
+					      <rule>
+                          <predicate>lteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>2499</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>	
+				
+	 	
+	
+	
+		  	<cluster>
+				    <id>2.2</id>
+					<name> Female</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>female</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					
+					       <rule>
+                          <predicate>gteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>1500</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 </rule>
+					      <rule>
+                          <predicate>lteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>2499</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>	
+				
+				<cluster>
+				    <id>2.3</id>
+					<name>Ambiguous</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>Ambiguous</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					
+					       <rule>
+                          <predicate>gteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>1500</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 </rule>
+					      <rule>
+                          <predicate>lteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>2499</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>
+				
+				<cluster>
+				    <id>2.4</id>
+					<name>Not Entered</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					
+					       <rule>
+                          <predicate>gteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>1500</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 </rule>
+					      <rule>
+                          <predicate>lteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>2499</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>	
+	</clusterSet>
+
+
+
+
+
+
+  <!-- third cluster setbaaby weight BETWEEN 2500 AND 3499 -->
+	<clusterSet>
+	            <id>3</id>
+		        <name><![CDATA[2500-3499]]></name>
+		        
+			    
+				
+	           
+				
+	    	<cluster>
+				    <id>3.1</id>
+					<name> Male </name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>male</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+				
+					       <rule>
+                          <predicate>gteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>2500</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 </rule>
+					      <rule>
+                          <predicate>lteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>3499</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>	
+				
+	 	
+	
+	
+		  	<cluster>
+				    <id>3.2</id>
+					<name> Female</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>female</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+				
+					       <rule>
+                          <predicate>gteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>2500</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 </rule>
+					      <rule>
+                          <predicate>lteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>3499</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>	
+				
+				<cluster>
+				    <id>3.3</id>
+					<name> Ambiguous</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>Ambiguous</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+				
+					       <rule>
+                          <predicate>gteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>2500</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 </rule>
+					      <rule>
+                          <predicate>lteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>3499</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>	
+					
+		  	<cluster>
+				    <id>3.4</id>
+					<name>Not Entered</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+				
+					       <rule>
+                          <predicate>gteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>2500</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 </rule>
+					      <rule>
+                          <predicate>lteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>3499</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>	
+	</clusterSet>
+	
+
+     	<!-- fourth cluster weight greater than  or equal to 3500 -->	
+	<clusterSet>
+	
+			
+	        <id>4</id>
+		        <name><![CDATA[>=3500]]></name>
+	
+	    
+	    	<cluster>
+				    <id>4.1</id>
+					<name>Male</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>male</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  
+					   <rule>
+                          <predicate>gteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>3500</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					</ruleSet>
+				</cluster>	
+				
+	 	
+	
+	
+		    
+	    	<cluster>
+				    <id>4.2</id>
+					<name>Female</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>female</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 
+					   <rule>
+                          <predicate>gteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>3500</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>	
+				
+				<cluster>
+				    <id>4.3</id>
+					<name>Ambiguous</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>Ambiguous</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 
+					   <rule>
+                          <predicate>gteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>3500</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>
+				
+				<cluster>
+				    <id>4.4</id>
+					<name>Not Entered</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 
+					   <rule>
+                          <predicate>gteq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>3500</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>	
+	</clusterSet>
+	
+
+	
+
+     	<!-- fifth cluster weight unknown -->	
+	<clusterSet>
+	
+			
+	        <id>5</id>
+		        <name><![CDATA[Not Entered]]></name>
+	
+	    
+	    	<cluster>
+				    <id>5.1</id>
+					<name>Male</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>male</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  
+					   <rule>
+                          <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					</ruleSet>
+				</cluster>	
+				
+	 	
+	
+	
+		    
+	    	<cluster>
+				    <id>5.2</id>
+					<name>Female</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>female</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 
+					   <rule>
+                          <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>	
+				
+				<cluster>
+				    <id>5.3</id>
+					<name>Ambiguous</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>Ambiguous</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 
+					   <rule>
+                          <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>
+				
+				
+				<cluster>
+				    <id>5.4</id>
+					<name>Not Entered</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyGender</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 
+					   <rule>
+                          <predicate>eq</predicate>					
+					   <expression>
+					         <question>babyWeight</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>	
+	</clusterSet>
+  
+
+			
+</clusters>
+			

@@ -1,0 +1,7 @@
+com\nv\netmdkb\pl\dao\xml\impl\CorporateLoginHandlerTest.class
+com\nv\netmdkb\pl\dao\impl\AnalyticDaoImplTest.class
+com\nv\netmdkb\analytic\bl\dataPoint\DataPointTest.class
+com\nv\netmdkb\pl\dao\impl\QuestionAnswerDaoImplTest.class
+com\nv\netmdkb\bl\service\impl\AnalyticServiceManagerTest.class
+com\nv\netmdkb\pl\dao\xml\impl\ClusterParserTest.class
+com\nv\netmdkb\analytic\obstetrics\listener\InformationListenerTest.class

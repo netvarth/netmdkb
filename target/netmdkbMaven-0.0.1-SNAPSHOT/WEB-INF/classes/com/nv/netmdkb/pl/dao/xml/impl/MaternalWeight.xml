@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clusters>
+     	<!-- first cluster Maternal weight less than 40 -->	
+	<clusterSet>
+	
+			
+	        <id>1</id>
+		    <name><![CDATA[<40]]> </name>
+		        
+			    
+				<ruleSet>
+                       <predicate>lt</predicate>					
+					   <expression>
+					         <question>weight</question>
+					         <edge>40</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	    
+
+	</clusterSet>
+	
+
+		        
+	<!-- second cluster Maternal weight  BETWEEN 45 AND 49 -->	
+	<clusterSet>
+	        <id>2</id>
+		        <name><![CDATA[40-49]]> </name>
+		       
+				<ruleSet>
+                       <predicate>gteq</predicate>					
+					   <expression>
+					         <question>weight</question>
+					         <edge>40</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					   <rule>
+					        <predicate>lteq</predicate>					
+					   <expression>
+					         <question>weight</question>
+					         <edge>49</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					   </rule>
+				</ruleSet>
+	    
+
+	</clusterSet>
+	             	<!-- Maternal weight  BETWEEN 50 AND 69 -->	
+	<clusterSet>
+	
+	        <id>3</id>
+		        <name><![CDATA[50-69]]></name>
+		        
+			  				<ruleSet>
+                       <predicate>gteq</predicate>					
+					   <expression>
+					         <question>weight</question>
+					         <edge>50</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					   <rule>
+					        <predicate>lteq</predicate>					
+					   <expression>
+					         <question>weight</question>
+					         <edge>69</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					   </rule>
+				</ruleSet>
+
+	</clusterSet>
+	
+		             	<!--fourth cluster Maternal weight  BETWEEN 70 AND 89 -->	
+	<clusterSet>
+	
+	        <id>4</id>
+		        <name><![CDATA[70-89]]></name>
+		        
+			  				<ruleSet>
+                       <predicate>gteq</predicate>					
+					   <expression>
+					         <question>weight</question>
+					         <edge>70</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					   <rule>
+					        <predicate>lteq</predicate>					
+					   <expression>
+					         <question>weight</question>
+					         <edge>89</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					   </rule>
+				</ruleSet>
+
+	</clusterSet>
+	
+	
+		<!--  fifth cluster Maternal weight greater than 90 -->	
+	<clusterSet>
+	      		
+	        <id>5</id>
+		        <name><![CDATA[>90]]></name>
+		        
+			  				<ruleSet>
+                       <predicate>gteq</predicate>					
+					   <expression>
+					         <question>weight</question>
+					         <edge>90</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					   
+				</ruleSet>
+	    
+
+	</clusterSet>
+	
+			<!--  sixth cluster Maternal weight Unknown -->	
+	<clusterSet>
+	      		
+	        <id>6</id>
+		        <name><![CDATA[Not Entered]]></name>
+		        
+			  				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>weight</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					   
+				</ruleSet>
+	    
+
+	</clusterSet>
+	
+			
+</clusters>
