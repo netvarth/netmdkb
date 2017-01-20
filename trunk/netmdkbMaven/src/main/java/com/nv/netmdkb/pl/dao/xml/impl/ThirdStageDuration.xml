@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clusters>
+     	<!-- first cluster Third Stage Duration less than 9 -->	
+	<clusterSet>
+	
+			
+	        <id>1</id>
+		    <name><![CDATA[<=9]]></name>
+		        
+			    
+				<ruleSet>
+                       <predicate>lteq</predicate>					
+					   <expression>
+					         <question>thirdStageDuration</question>
+					         <edge>9</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+				
+				
+				
+	   
+	
+		</clusterSet>
+		<!-- second cluster Third Stage Duration between 10 to 29-->		
+		<clusterSet>
+		    
+				    <id>2</id>
+					<name><![CDATA[10-29]]></name>
+					<ruleSet>
+	                   <predicate>gteq</predicate>					
+					   <expression>
+					         <question>thirdStageDuration</question>
+					         <edge>10</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 
+					   <rule>
+                          <predicate>lteq</predicate>					
+					   <expression>
+					         <question>thirdStageDuration</question>
+					         <edge>29</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+			
+	
+	</clusterSet>	
+			
+			<!-- third cluster Third Stage Duration greater than 30-->			    
+	    	<clusterSet>
+				    <id>3</id>
+					<name><![CDATA[>=30]]></name>
+					<ruleSet>
+	                   <predicate>gteq</predicate>					
+					   <expression>
+					         <question>thirdStageDuration</question>
+					         <edge>30</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 
+					 
+					</ruleSet>
+				</clusterSet>	
+
+
+			
+			<!-- fourth cluster Third Stage Duration unknown-->			    
+	    	<clusterSet>
+				    <id>4</id>
+					<name><![CDATA[Not Entered]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>thirdStageDuration</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 
+					 
+					</ruleSet>
+				</clusterSet>	
+			
+</clusters>

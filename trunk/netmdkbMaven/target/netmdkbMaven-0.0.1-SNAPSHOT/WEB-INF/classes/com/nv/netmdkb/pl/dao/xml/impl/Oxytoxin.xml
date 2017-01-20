@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clusters>
+
+	<!-- first cluster oxytoxin type=IV -->
+	<clusterSet>
+	            <id>1</id>
+		        <name><![CDATA[IV]]></name>
+		        
+			    
+					<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>extraOxytoxinUsed</question>
+					         <edge>IV</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>    
+		  	
+	</clusterSet>
+
+  	<!-- second cluster cluster oxytoxin type=IM -->
+	<clusterSet>
+	            <id>2</id>
+		        <name><![CDATA[IM]]></name>
+		        
+			    
+					<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>extraOxytoxinUsed</question>
+					         <edge>IM</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	  		  	
+	</clusterSet>
+	
+	<clusterSet>
+	            <id>3</id>
+		        <name><![CDATA[IV & IM]]></name>
+		        
+			    
+					<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>extraOxytoxinUsed</question>
+					         <edge>IV,IM</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	  		  	
+	</clusterSet>
+	
+	
+		
+		<!-- fifth cluster oxytoxin type unknown  -->
+	<clusterSet>
+	            <id>4</id>
+		        <name><![CDATA[Not Entered]]></name>
+		        			    
+					<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>extraOxytoxinUsed</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	    
+	</clusterSet>
+	
+	
+</clusters>

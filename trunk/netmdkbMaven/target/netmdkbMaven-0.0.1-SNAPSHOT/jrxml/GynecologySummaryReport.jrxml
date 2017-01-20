@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="GynaSummaryReport1" language="groovy" pageWidth="1500" pageHeight="1042" columnWidth="1460" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4c45de82-fa43-4460-9df2-ea0c27ff85dd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="188"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString>
+		<![CDATA[select mnth,yer,count(*) as totalDelivery ,sum(if(book='booked',1,0)) as booked,sum(if(book='unbooked',1,0)) as unbooked,
+sum(if(age='20',1,0)) as age20,
+sum(if(age BETWEEN 20 AND 24,1,0)) as agebtw20and24,
+sum(if(age BETWEEN 25 AND 29,1,0)) as agebtw25and29,
+sum(if(age BETWEEN 30 AND 35,1,0)) as agebtw30and35,
+sum(if(age > 35,1,0)) as agegr35,
+sum(if(height<145,1,0)) as heightLs145,
+sum(if(height BETWEEN 145 AND 149,1,0)) as heightbtw145and149,
+sum(if(height BETWEEN 150 AND 170,1,0)) as heightbtw150and170,
+sum(if(height > 170,1,0)) as heightgr170,
+sum(if(weight<40,1,0)) as weightLs40,
+sum(if(weight BETWEEN 40 AND 49,1,0)) as weightbtw40and49,
+sum(if(weight BETWEEN 50 AND 69,1,0)) as weightbtw50and69,
+sum(if(weight BETWEEN 70 AND 89,1,0)) as weightbtw70and89,
+sum(if(weight > 90,1,0)) as weightGr90,
+sum(if(anemia ='yes',1,0)) as anemia,
+sum(if(diabetesMellitus ='yes',1,0)) as diabetesMellitus,
+sum(if(heartDisease ='yes',1,0)) as heartDisease,
+sum(if(severeHyper ='yes',1,0)) as severeHyper,
+sum(if(bmi<20,1,0)) as bmiLs20,
+sum(if(bmi BETWEEN 20 AND 24,1,0)) as bmibtw20and24,
+sum(if(bmi BETWEEN 25 AND 29,1,0)) as bmibtw25and29,
+sum(if(bmi BETWEEN 30 AND 34,1,0)) as bmibtw30and34,
+sum(if(bmi >=35,1,0)) as bmiGrEq35,
+sum(if(blooodGrp='A',1,0)) as A,
+sum(if(blooodGrp='B',1,0)) as B,
+sum(if(blooodGrp='AB',1,0)) as AB,
+sum(if(blooodGrp='O',1,0)) as O,
+sum(if(RhFactor='negative',1,0)) as RhNegative,
+sum(if(RhFactor='positive',1,0)) as RhPositive,
+sum(if(parity='1',1,0)) as para1,
+sum(if(parity='2',1,0)) as para2,
+sum(if(parity='3',1,0)) as para3
+from (select distinct case_id as caseId from answer_tbl where netmd_id=3) as q0
+LEFT OUTER JOIN (select answer as mnth,case_id as caseId from answer_tbl where quest_id=122 ) as q1 ON q0.caseId=q1.caseId
+LEFT OUTER JOIN (select answer as yer,case_id as caseId from answer_tbl where quest_id=123 ) as q2 ON q0.caseId=q2.caseId
+LEFT OUTER JOIN (select answer as book,case_id as caseId from answer_tbl where quest_id=2 ) as q3 ON q0.caseId=q3.caseId
+LEFT OUTER JOIN (select answer as age,case_id as caseId from answer_tbl where quest_id=4 ) as q4 ON q0.caseId=q4.caseId
+LEFT OUTER JOIN (select answer as height,case_id as caseId from answer_tbl where quest_id=6 ) as q5 ON q0.caseId=q5.caseId
+LEFT OUTER JOIN (select answer as weight,case_id as caseId from answer_tbl where quest_id=7 ) as q6 ON q0.caseId=q6.caseId
+LEFT OUTER JOIN (select answer as anemia,case_id as caseId from answer_tbl where quest_id=31 ) as q7 ON q0.caseId=q7.caseId
+LEFT OUTER JOIN (select answer as diabetesMellitus,case_id as caseId from answer_tbl where quest_id=33 ) as q8 ON q0.caseId=q8.caseId
+LEFT OUTER JOIN (select answer as heartDisease,case_id as caseId from answer_tbl where quest_id=34 ) as q9 ON q0.caseId=q9.caseId
+LEFT OUTER JOIN (select answer as severeHyper,case_id as caseId from answer_tbl where quest_id=39 ) as q10 ON q0.caseId=q10.caseId
+LEFT OUTER JOIN (select answer as bmi,case_id as caseId from answer_tbl where quest_id=8 ) as q11 ON q0.caseId=q11.caseId
+LEFT OUTER JOIN (select answer as blooodGrp,case_id as caseId from answer_tbl where quest_id=9 ) as q12 ON q0.caseId=q12.caseId
+LEFT OUTER JOIN (select answer as RhFactor,case_id as caseId from answer_tbl where quest_id=10 ) as q13 ON q0.caseId=q13.caseId
+LEFT OUTER JOIN (select answer as parity,case_id as caseId from answer_tbl where quest_id=26 ) as q14 ON q0.caseId=q14.caseId where mnth ='april'or mnth='may'or mnth='june' and yer='2013' group by mnth;
+]]>
+	</queryString>
+	<field name="mnth" class="java.lang.String"/>
+	<field name="yer" class="java.lang.String"/>
+	<field name="totalDelivery" class="java.lang.Long"/>
+	<field name="booked" class="java.math.BigDecimal"/>
+	<field name="unbooked" class="java.math.BigDecimal"/>
+	<field name="age20" class="java.math.BigDecimal"/>
+	<field name="agebtw20and24" class="java.math.BigDecimal"/>
+	<field name="agebtw25and29" class="java.math.BigDecimal"/>
+	<field name="agebtw30and35" class="java.math.BigDecimal"/>
+	<field name="agegr35" class="java.math.BigDecimal"/>
+	<field name="heightLs145" class="java.math.BigDecimal"/>
+	<field name="heightbtw145and149" class="java.math.BigDecimal"/>
+	<field name="heightbtw150and170" class="java.math.BigDecimal"/>
+	<field name="heightgr170" class="java.math.BigDecimal"/>
+	<field name="weightLs40" class="java.math.BigDecimal"/>
+	<field name="weightbtw40and49" class="java.math.BigDecimal"/>
+	<field name="weightbtw50and69" class="java.math.BigDecimal"/>
+	<field name="weightbtw70and89" class="java.math.BigDecimal"/>
+	<field name="weightGr90" class="java.math.BigDecimal"/>
+	<field name="anemia" class="java.math.BigDecimal"/>
+	<field name="diabetesMellitus" class="java.math.BigDecimal"/>
+	<field name="heartDisease" class="java.math.BigDecimal"/>
+	<field name="severeHyper" class="java.math.BigDecimal"/>
+	<field name="bmiLs20" class="java.math.BigDecimal"/>
+	<field name="bmibtw20and24" class="java.math.BigDecimal"/>
+	<field name="bmibtw25and29" class="java.math.BigDecimal"/>
+	<field name="bmibtw30and34" class="java.math.BigDecimal"/>
+	<field name="bmiGrEq35" class="java.math.BigDecimal"/>
+	<field name="A" class="java.math.BigDecimal"/>
+	<field name="B" class="java.math.BigDecimal"/>
+	<field name="AB" class="java.math.BigDecimal"/>
+	<field name="O" class="java.math.BigDecimal"/>
+	<field name="RhNegative" class="java.math.BigDecimal"/>
+	<field name="RhPositive" class="java.math.BigDecimal"/>
+	<field name="para1" class="java.math.BigDecimal"/>
+	<field name="para2" class="java.math.BigDecimal"/>
+	<field name="para3" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="e92c6135-d408-422f-873b-a3de4cc6d9f3" style="Title" x="419" y="5" width="492" height="53" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black"/>
+				</textElement>
+				<text><![CDATA[Gynaecology Summary Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="94a5b30b-3ed4-4b54-8a1a-8dafeb98a84b" x="1198" y="0" width="161" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Blood Group]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cdff283d-8219-44b2-8e98-6175323fe3ae" x="1022" y="0" width="169" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[BMI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2523144-3413-4740-b013-b1da12d68bef" x="1364" y="0" width="95" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Parity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="81b5fb45-506f-4f36-ab7d-eb8b40f14050" x="446" y="0" width="171" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Maternal Height]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1c872132-ac59-433d-b2a6-b8d65c6a9b96" x="259" y="0" width="187" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Age]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="095fad53-7270-4f49-88c4-317e4b2c2fe8" x="1" y="0" width="62" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="913c6cab-bc1e-47e7-8e9a-4138da21557d" x="617" y="0" width="188" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Maternal Weight]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="db47af19-18bc-48cd-ac87-3f168f005fc8" x="816" y="0" width="203" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Maternal Complication]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="b07340de-1156-4ab1-910f-d3d133b0a5cc" positionType="FixRelativeToBottom" x="2" y="20" width="1460" height="1" backcolor="#000000"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="40e02aa0-45a9-4d2e-aca1-7e36aac81889" x="62" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="40e02aa0-45a9-4d2e-aca1-7e36aac81889" x="259" y="-1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="40e02aa0-45a9-4d2e-aca1-7e36aac81889" x="446" y="-1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="b07340de-1156-4ab1-910f-d3d133b0a5cc" positionType="FixRelativeToBottom" x="2" y="-2" width="1460" height="1" backcolor="#000000"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="40e02aa0-45a9-4d2e-aca1-7e36aac81889" x="617" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="40e02aa0-45a9-4d2e-aca1-7e36aac81889" x="814" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="40e02aa0-45a9-4d2e-aca1-7e36aac81889" x="1019" y="-1" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement uuid="40e02aa0-45a9-4d2e-aca1-7e36aac81889" x="1197" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="40e02aa0-45a9-4d2e-aca1-7e36aac81889" x="1359" y="0" width="1" height="20"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement uuid="b07340de-1156-4ab1-910f-d3d133b0a5cc" positionType="FixRelativeToBottom" x="0" y="35" width="1460" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="ba8d6826-05f7-4c45-952c-64cc73df216c" style="Column header" x="0" y="0" width="63" height="34"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Month]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="805c3719-3213-4428-b687-1e24e287b3a1" style="Column header" x="63" y="0" width="55" height="34"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8ad09de7-4cb1-450f-9d65-21364e1711dd" style="Column header" x="118" y="0" width="47" height="34"/>
+				<textElement/>
+				<text><![CDATA[Total Delivery]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="08b89162-4858-444a-b489-c49b0da8e695" style="Column header" x="170" y="0" width="40" height="34"/>
+				<textElement/>
+				<text><![CDATA[Booked]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2a78b896-f255-47a4-baf8-203913285f5b" style="Column header" x="213" y="0" width="42" height="34"/>
+				<textElement/>
+				<text><![CDATA[UnBooked]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9d6a82a1-04b9-48fe-afe4-29977e7612ce" style="Column header" x="257" y="0" width="28" height="34"/>
+				<textElement/>
+				<text><![CDATA[20]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1254fed1-fe42-43c6-ac47-911c723f7c2d" style="Column header" x="289" y="0" width="41" height="34"/>
+				<textElement/>
+				<text><![CDATA[20-24]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="616595c9-618f-4d16-8b82-48043bec6f34" style="Column header" x="330" y="0" width="40" height="34"/>
+				<textElement/>
+				<text><![CDATA[25-29]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e2d9fa02-05c7-4f89-bd65-ed3b9458bacd" style="Column header" x="373" y="0" width="40" height="34"/>
+				<textElement/>
+				<text><![CDATA[30-35]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="32f2d8ed-2801-4df1-a00d-3147e6de1214" style="Column header" x="417" y="0" width="30" height="34"/>
+				<textElement/>
+				<text><![CDATA[>35]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="feac9464-6b92-4f83-ade0-f0489e05f043" style="Column header" x="447" y="0" width="33" height="34"/>
+				<textElement/>
+				<text><![CDATA[<145]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2155407a-4f51-460d-a0f2-024bacedc581" style="Column header" x="481" y="0" width="50" height="34"/>
+				<textElement/>
+				<text><![CDATA[145-149]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6537a678-f4c1-4325-9e43-1dbbe2748bb6" style="Column header" x="532" y="0" width="49" height="34"/>
+				<textElement/>
+				<text><![CDATA[150-170]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="80e39f9e-be31-423f-a6fa-bf2eee463a7a" style="Column header" x="584" y="0" width="33" height="34"/>
+				<textElement/>
+				<text><![CDATA[>170]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ef65c2e6-bab0-4204-9f6b-6fe838d976f2" style="Column header" x="619" y="0" width="30" height="34"/>
+				<textElement/>
+				<text><![CDATA[<40]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="af93df09-c25f-4f75-b9df-8307eebc7f92" style="Column header" x="651" y="0" width="38" height="34"/>
+				<textElement/>
+				<text><![CDATA[40-49]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3a9f0f50-9100-45fc-86ab-b1887d0d7155" style="Column header" x="691" y="0" width="40" height="34"/>
+				<textElement/>
+				<text><![CDATA[50-69]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b398fa0e-929a-4407-bac7-23944482fd94" style="Column header" x="733" y="0" width="41" height="34"/>
+				<textElement/>
+				<text><![CDATA[70-89]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d2ee99ab-201e-4f14-b898-87bbf3936f0f" style="Column header" x="777" y="0" width="39" height="34"/>
+				<textElement/>
+				<text><![CDATA[>90]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="77a07066-4403-4a73-a4b1-4eb5e11449e2" style="Column header" x="864" y="0" width="47" height="34"/>
+				<textElement/>
+				<text><![CDATA[Hyper tension]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c39048d7-2971-436a-876b-22661f3ce644" style="Column header" x="815" y="0" width="49" height="34"/>
+				<textElement/>
+				<text><![CDATA[Anemia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="91b67366-2223-4c02-afe9-22003574013d" style="Column header" x="911" y="0" width="57" height="34"/>
+				<textElement/>
+				<text><![CDATA[Diabetes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d5d95110-7db5-4484-b19b-2b34e996f3c7" style="Column header" x="968" y="0" width="47" height="34"/>
+				<textElement/>
+				<text><![CDATA[Heart disease]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="96c8eb91-d07a-4f64-a5a5-e5f88b5a085f" style="Column header" x="1020" y="0" width="28" height="34"/>
+				<textElement/>
+				<text><![CDATA[<20]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8cfb6adc-5c18-4672-9a1e-525581894012" style="Column header" x="1052" y="0" width="35" height="34"/>
+				<textElement/>
+				<text><![CDATA[20-24]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="26ea8eea-f9d3-4b87-b1db-51aaa0d5850a" style="Column header" x="1087" y="0" width="33" height="34"/>
+				<textElement/>
+				<text><![CDATA[25-29]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4c949f82-f82c-4425-9348-acb5428e6be1" style="Column header" x="1124" y="0" width="39" height="34"/>
+				<textElement/>
+				<text><![CDATA[30-34]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="21bf85d4-a3af-44fb-9cef-995ac431259a" style="Column header" x="1166" y="0" width="36" height="34"/>
+				<textElement/>
+				<text><![CDATA[35 & above]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0e16e341-7953-45a5-b33d-561349f31778" style="Column header" x="1206" y="0" width="23" height="34"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[A]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f31be0d8-36f2-432c-b648-70ad5a1bd31a" style="Column header" x="1232" y="0" width="22" height="34"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[B]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c314c587-625a-468c-85d0-1b3b24f7f671" style="Column header" x="1258" y="0" width="23" height="34"/>
+				<textElement/>
+				<text><![CDATA[AB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="52441ac3-cdcc-476d-b8e1-d4b38f9fcbd3" style="Column header" x="1284" y="0" width="21" height="34"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[O]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d02acd94-e8af-49f2-9953-bd2c14aa76d1" style="Column header" x="1309" y="0" width="27" height="34"/>
+				<textElement/>
+				<text><![CDATA[Rh Neg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bbbdb354-16f4-45b0-88fc-0d204196f473" style="Column header" x="1340" y="0" width="24" height="34"/>
+				<textElement/>
+				<text><![CDATA[Rh Pos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b8322e4a-ab9c-4148-8e6c-293d038d8aef" style="Column header" x="1370" y="0" width="32" height="34"/>
+				<textElement/>
+				<text><![CDATA[para 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="022b0f09-5c4a-436c-ad3f-275d6dd4bcba" style="Column header" x="1402" y="0" width="33" height="34"/>
+				<textElement/>
+				<text><![CDATA[para 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="87ba42df-e945-40d6-8b96-5b0ab0231df7" style="Column header" x="1434" y="0" width="26" height="34"/>
+				<textElement/>
+				<text><![CDATA[para 3]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<line>
+				<reportElement uuid="2a5f56aa-b6a1-42b5-8d9a-63faa0aacf75" positionType="FixRelativeToBottom" x="-1" y="23" width="1460" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="d0f09925-8629-4457-8e00-1a513f680032" style="Detail" x="73" y="0" width="45" height="24"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{yer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4099d3d2-7f0d-4de6-95d4-6d9957c0aac6" style="Detail" x="118" y="0" width="47" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{totalDelivery}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="59b58576-5fcb-46b6-8226-638e0a4faea5" style="Detail" x="173" y="0" width="37" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{booked}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="871a11f2-8ae0-4f69-aee1-fc6bad217a21" style="Detail" x="213" y="0" width="42" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{unbooked}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="aa3c0640-2181-44d7-95de-84e3563b5527" style="Detail" x="257" y="0" width="28" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{age20}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d8ffb5f8-433e-49f7-8ef6-d1e6c5652e09" style="Detail" x="289" y="0" width="41" height="24"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{agebtw20and24}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9102569a-3d89-426b-8272-83c9f4b7bfdd" style="Detail" x="330" y="0" width="40" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{agebtw25and29}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3d6312c5-0d44-43a9-82a5-ee75b8b16a5c" style="Detail" x="373" y="0" width="40" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{agebtw30and35}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a3784b3e-afe0-40ac-9ee8-dbf11b5d93ce" style="Detail" x="417" y="0" width="30" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{agegr35}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="92ef525e-d199-41c5-a778-f5acf1246583" style="Detail" x="452" y="0" width="28" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{heightLs145}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="33547ce4-9704-4a9d-9adf-b35a603f103b" style="Detail" x="486" y="0" width="40" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{heightbtw145and149}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="30461a8e-bc29-4d9a-b7b2-f2e5d9ef6b40" style="Detail" x="532" y="0" width="49" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{heightbtw150and170}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="47968902-d424-4926-804b-24e764ea6aaf" style="Detail" x="584" y="0" width="33" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{heightgr170}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9fe45cde-e1de-45cd-9272-039c93fe5dc6" style="Detail" x="619" y="-2" width="30" height="25"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{weightLs40}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5338a389-66ea-448e-8b5f-c6ef98adf0ed" style="Detail" x="651" y="0" width="38" height="24"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{weightbtw40and49}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c2efd80a-3db4-49f8-abb8-20faa152ab37" style="Detail" x="691" y="0" width="40" height="24"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{weightbtw50and69}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bc218326-25be-4965-8568-ab2d106711d3" style="Detail" x="733" y="0" width="41" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{weightbtw70and89}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="baac53b1-bfaf-4753-b364-e6c514b75601" style="Detail" x="777" y="0" width="38" height="24"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{weightGr90}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5ba6f975-2e1b-42db-9755-97aa9f1eda21" style="Detail" x="816" y="0" width="48" height="24"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{severeHyper}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="40399bdd-68e2-4828-92b7-50236d7ed35d" style="Detail" x="869" y="0" width="42" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{anemia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4febb173-45a5-4c13-9d38-3824867d4888" style="Detail" x="911" y="0" width="57" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{diabetesMellitus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c05715dc-7007-4cf4-bfc8-b857d8ae535c" style="Detail" x="968" y="0" width="47" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{heartDisease}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b3fc2d06-bf40-4523-80c7-0e19651ec547" style="Detail" x="1022" y="0" width="25" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{bmiLs20}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ed44c4dd-3510-4d38-a197-037cd8610a45" style="Detail" x="1058" y="0" width="29" height="24"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{bmibtw20and24}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="46fc1630-9047-427e-93d5-68870449ef41" style="Detail" x="1090" y="0" width="30" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{bmibtw25and29}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ae474910-2c0e-4a4c-95e2-a902e6d7c27f" style="Detail" x="1127" y="0" width="36" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{bmibtw30and34}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="81d2bae9-6a0f-42b1-991b-59114d123e26" style="Detail" x="1170" y="0" width="32" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{bmiGrEq35}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="31945414-f240-40a1-adda-9d01d85700dc" style="Detail" x="1204" y="0" width="25" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{A}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="eeded0ea-95ca-4366-8942-12ff972fd511" style="Detail" x="1235" y="0" width="19" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{B}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c326b84b-b758-4aa0-b90b-df0f9982ff6d" style="Detail" x="1256" y="0" width="25" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AB}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e098d1c5-c56b-4b76-84f6-d6ea1309dbc1" style="Detail" x="1285" y="0" width="20" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{O}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4dcc79a1-2401-4e97-b393-cb54b51c8768" style="Detail" x="1311" y="0" width="25" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{RhNegative}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="39af9cc4-394a-41b8-b612-984368b257ce" style="Detail" x="1340" y="0" width="24" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{RhPositive}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fa59cdaf-80be-47a2-b2cc-9f6ca28ba253" style="Detail" x="1374" y="0" width="15" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{para1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6c1c4a0c-911e-4872-892c-b50c8e11d674" style="Detail" x="1402" y="0" width="21" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{para2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="627ef5ef-885f-44ae-b41c-103c8c59b191" style="Detail" x="1433" y="0" width="26" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{para3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ddb5dcfb-2d84-4cf7-9b96-3b3c678d49b2" style="Detail" x="10" y="0" width="53" height="23"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{mnth}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement uuid="63b9ea84-aebe-4c9d-9bf6-d7b207823367" positionType="FixRelativeToBottom" x="0" y="3" width="1460" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="2aa18f3c-48cb-44b0-acbf-e995542f0bbc" style="Column header" x="1340" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="cd6ba1e9-920c-445e-9a8d-b4f0c2908cc7" style="Column header" x="1420" y="0" width="40" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="8dc405d1-9f7f-416f-bbce-4c3112b00209" style="Column header" x="0" y="0" width="197" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

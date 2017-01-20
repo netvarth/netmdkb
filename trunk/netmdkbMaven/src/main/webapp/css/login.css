@@ -1,0 +1,68 @@
+
+#login {
+  text-align: center;
+}
+
+#login_container {
+  margin: 0 auto;
+  position: relative;
+  width: 602px;
+}
+
+#login_form {
+  background: #f9f9f9;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px #333;
+  margin: 0 auto;
+  padding: 8px;
+  position: absolute;
+	zoom: 1;
+}
+
+#login_form p {
+  display: inline-block;
+  *display: inline;
+  margin-bottom: 0;
+  margin-right: 4px;
+  width: 240px;
+  zoom: 1;
+}
+
+#login_form form input[type="text"], #login_form form input[type="password"], #login_form form textarea {
+  background: url(../images/input_bg.png) repeat-x #fdfdfd;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #ccc;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 #fff;
+  color: #666;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  height: 30px;
+  outline: none;
+  padding: 6px 10px;
+  resize: none;
+  width: 79;
+  margin:3px 0 0 0;
+}
+
+#login_form form input.large { width: 100% }
+
+/* ==========  Login page  ========== */
+.loginWrapper { margin: -119px 0 0 -170px; position: absolute; top: 50%; left: 50%; }
+.loginWrapper .widget1 { width: 340px; background: #f9f9f9; border: 1px solid #cdcdcd; display: block; height: 250px; }
+.loginLogo { position: absolute; width: 253px; height: 78px; display: block; top: -80px; left: 50%; margin-left: -118px; } 
+.widget1 { background: #f9f9f9; border: 1px solid #cdcdcd; margin-top: 32px; clear: both; }
+.widget1 .title1 { height: 36px; background: #efefef url(../images/titleBg.png) repeat-x; border-bottom: 1px solid #cdcdcd; }
+.widget1 .title1 .titleIcon { float: left; padding: 11px 11px; border-right: 1px solid #D5D5D5; margin:0 8px 0 0; }
+.widget1 .content1 { height:200px;}
+.loginWrapper h6 {
+	font:bold 12px Arial, Helvetica, sans-serif;
+	color:#333;
+	padding:10px 0 0 8px;
+}
+.login-text {
+	font:bold 12px Arial, Helvetica, sans-serif;
+	color:#333;
+	margin:0px 0px 0 0px;
+	padding:0;
+}

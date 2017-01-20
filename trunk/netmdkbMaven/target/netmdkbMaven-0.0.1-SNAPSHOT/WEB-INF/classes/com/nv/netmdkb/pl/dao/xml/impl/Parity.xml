@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<clusters>
+
+ 	<!-- Parity 0 -->
+	<clusterSet>
+	
+			
+	        <id>0</id>
+		        <name><![CDATA[0]]></name>
+		        
+			    
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>parity</question>
+					         <edge>0</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	 </clusterSet>
+	 
+     	<!-- Parity 1 -->
+	<clusterSet>
+	
+			
+	        <id>1</id>
+		        <name><![CDATA[1]]></name>
+		        
+			    
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>parity</question>
+					         <edge>1</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	 </clusterSet>
+	 
+	<!-- Parity 2 -->
+	 
+	 <clusterSet>
+	    
+	    
+	        <id>2</id>
+		        <name><![CDATA[2]]></name>
+		        
+			    
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>parity</question>
+					         <edge>2</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	 </clusterSet>
+	 
+	 <!-- Parity 3 -->
+	
+	<clusterSet>
+	    
+	    
+	        <id>3</id>
+		        <name><![CDATA[3]]></name>
+		        
+			    
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>parity</question>
+					         <edge>3</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	 </clusterSet>
+	 
+	<!-- Parity Between 4 to 5 -->
+	
+	<clusterSet>
+	    
+	    
+	        <id>4</id>
+		        <name><![CDATA[4-5]]></name>
+		        
+			    
+				<ruleSet>
+                       <predicate>gteq</predicate>					
+					   <expression>
+					         <question>parity</question>
+					         <edge>4</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					    <rule>
+                          <predicate>lteq</predicate>					
+					   <expression>
+					         <question>parity</question>
+					         <edge>5</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+				</ruleSet>
+	           
+    </clusterSet>
+    
+	 <!-- Parity Greaterthan 6 -->
+	
+	<clusterSet>
+	    
+	    
+	        <id>5</id>
+		        <name><![CDATA[>=6]]></name>
+		        
+			    
+				<ruleSet>
+                       <predicate>gteq</predicate>					
+					   <expression>
+					         <question>parity</question>
+					         <edge>6</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	 </clusterSet>
+	 
+	<clusterSet>
+	    
+	    
+	        <id>6</id>
+		        <name><![CDATA[Not Entered]]></name>
+		        
+			    
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>parity</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	 </clusterSet>
+	 
+</clusters>	

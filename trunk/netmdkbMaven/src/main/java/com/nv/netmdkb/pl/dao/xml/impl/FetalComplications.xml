@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<clusters>
+     		<!-- fetalStillBrth -->
+	<clusterSet>
+	
+			
+	        <id>1</id>
+		        <name>StillBirth</name>
+		        <cluster>
+		             <id>1.1</id>
+		        <name>Total</name>
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>fetalstillbirth</question>
+					        <edge>Yes</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+		        </cluster>
+		        
+		             <cluster>
+		             <id>1.2</id>
+		        <name>Not Entered</name>
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>fetalstillbirth</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+		        </cluster>
+			     
+	</clusterSet>
+	
+	<!-- fetalNeonatalDeath -->
+	<clusterSet>
+	          
+	          <id>2</id>
+		        <name>Neonatal Death</name>
+		        
+		          <cluster>
+			    <id>2.1</id>
+		        <name>Total</name>
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>fetalNeonatalDeath</question>
+					         <edge>Yes</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+				      </cluster>
+				      
+		          
+		                 
+		          <cluster>
+			    <id>2.2</id>
+		        <name>Not Entered</name>
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>fetalNeonatalDeath</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+				      </cluster>
+	</clusterSet>
+	
+	<!-- Fetal Anomalies-->
+	<clusterSet>
+	    
+	             <id>3</id>
+		        <name>Anomalies</name>
+		        <cluster>
+			     <id>3.1</id>
+		        <name>Total</name>
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>fetalCongAnomali</question>
+					        <edge>Yes</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	        </cluster>
+	        
+		        <cluster>
+			     <id>3.2</id>
+		        <name>Not Entered</name>
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>fetalCongAnomali</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	        </cluster>
+	</clusterSet>
+	<!-- fetal NICU Admission -->
+	<clusterSet>
+	    
+	             <id>4</id>
+		        <name>NICU Admission</name>
+		        <cluster>
+			     <id>4.1</id>
+		        <name>Total</name>
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>fetalNICU</question>
+					      <edge>Yes</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+				</cluster>
+				
+				      <cluster>
+			     <id>4.2</id>
+		        <name>Not Entered</name>
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>fetalNICU</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+				</cluster>
+	        
+	</clusterSet>
+	
+	</clusters>
+	

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clusters>
+     	<!-- booked statistics booked -->	
+	<clusterSet>
+	
+			
+	        <id>1</id>
+		    <name>Booked</name>
+		        
+			    
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>bookedUnbooked</question>
+					         <edge>booked</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	    
+
+	</clusterSet>
+	
+
+		        
+	<!--booked statistics unbooked   -->	
+	<clusterSet>
+	        <id>2</id>
+		        <name>Unbooked</name>
+		       
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>bookedUnbooked</question>
+					         <edge>unbooked</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	    
+
+	</clusterSet>
+	
+	    <!--booked statistics unbooked   -->	
+	<clusterSet>
+	        <id>3</id>
+		        <name>Referred</name>
+		       
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>bookedUnbooked</question>
+					         <edge>Referred</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	    
+
+	</clusterSet>   
+	      
+	<!--booked statistics unbooked   -->	
+<!-- 	<clusterSet> -->
+<!-- 	        <id>4</id> -->
+<!-- 		        <name>Unknown</name> -->
+		       
+<!-- 				<ruleSet> -->
+<!--                        <predicate>eq</predicate>					 -->
+<!-- 					   <expression> -->
+<!-- 					         <question>bookedUnbooked</question> -->
+<!-- 					         <edge>Unknown</edge> -->
+<!-- 					   </expression> -->
+<!-- 					   <conjunction>end</conjunction> -->
+<!-- 				</ruleSet> -->
+	    
+
+<!-- 	</clusterSet> -->
+	
+			
+</clusters>

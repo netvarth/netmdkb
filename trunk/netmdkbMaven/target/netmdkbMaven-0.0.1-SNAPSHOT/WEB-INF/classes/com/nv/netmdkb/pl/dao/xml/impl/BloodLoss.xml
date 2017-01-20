@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clusters>
+     	<!-- first cluster Blood Loss<500-->	
+	<clusterSet>
+	
+			
+	        <id>1</id>
+		        <name><![CDATA[<500]]></name>
+			
+	    
+	    
+	    
+	    	<cluster>
+				    <id>1.1</id>
+					<name>Vaginal</name>
+					<ruleSet>
+					
+	                   <predicate>lt</predicate>					
+					   <expression>
+					         <question>bloodLoss</question>
+					         <edge>500</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  
+					   <rule>
+                          <predicate>eq</predicate>					
+					   <expression>
+					         <question>typeOfDelivery</question>
+					         <edge>Vaginal</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					</ruleSet>
+				</cluster>	
+				
+	 	
+	
+	
+		    
+	    	<cluster>
+				    <id>1.2</id>
+					<name>CS</name>
+					<ruleSet>
+	                   <predicate>lt</predicate>					
+					   <expression>
+					         <question>bloodLoss</question>
+					         <edge>500</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 
+					   <rule>
+                          <predicate>eq</predicate>					
+					   <expression>
+					         <question>typeOfDelivery</question>
+					         <edge>CS</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>
+					
+				<cluster>
+				    <id>1.3</id>
+					<name>Not Entered</name>
+					<ruleSet>
+	                   <predicate>lt</predicate>					
+					   <expression>
+					         <question>bloodLoss</question>
+					         <edge>500</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 
+					   <rule>
+                          <predicate>eq</predicate>					
+					   <expression>
+					         <question>typeOfDelivery</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>	
+	</clusterSet>
+	
+
+	<!-- second cluster bloodLoss between 500 and 999 -->
+	<clusterSet>
+	            <id>2</id>
+		        <name><![CDATA[500-999]]></name>
+		        
+
+	
+		  	<cluster>
+				    <id>2.1</id>
+					<name> Vaginal</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>typeOfDelivery</question>
+					         <edge>Vaginal</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+				
+					       <rule>
+                          <predicate>gteq</predicate>					
+					   <expression>
+					         <question>bloodLoss</question>
+					         <edge>500</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 </rule>
+					      <rule>
+                          <predicate>lteq</predicate>					
+					   <expression>
+					         <question>bloodLoss</question>
+					         <edge>999</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>	
+				
+					
+	    	<cluster>
+				    <id>2.2</id>
+					<name>CS</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>typeOfDelivery</question>
+					         <edge>CS</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+				
+					       <rule>
+                          <predicate>gteq</predicate>					
+					   <expression>
+					         <question>bloodLoss</question>
+					         <edge>500</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 </rule>
+					      <rule>
+                          <predicate>lteq</predicate>					
+					   <expression>
+					         <question>bloodLoss</question>
+					         <edge>999</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>	
+				
+							
+	    	<cluster>
+				    <id>2.3</id>
+					<name>Not Entered</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>typeOfDelivery</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+				
+					       <rule>
+                          <predicate>gteq</predicate>					
+					   <expression>
+					         <question>bloodLoss</question>
+					         <edge>500</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 </rule>
+					      <rule>
+                          <predicate>lteq</predicate>					
+					   <expression>
+					         <question>bloodLoss</question>
+					         <edge>999</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					 
+					</ruleSet>
+				</cluster>
+	</clusterSet>
+	
+
+   	<!--  third cluster blood Loss >=1000 -->
+	<clusterSet>
+	            <id>3</id>
+		        <name><![CDATA[>=1000]]></name>
+	
+	    	<cluster>
+				    <id>3.1</id>
+					<name>Vaginal </name>
+					<ruleSet>
+	                   <predicate>gteq</predicate>					
+					   <expression>
+					         <question>bloodLoss</question>
+					         <edge>1000</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+				
+					       <rule>
+                          <predicate>eq</predicate>					
+					   <expression>
+					         <question>typeOfDelivery</question>
+					         <edge>Vaginal</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					      
+					 
+					</ruleSet>
+				</cluster>	
+				
+	 	
+	
+	
+		  	<cluster>
+				    <id>3.2</id>
+					<name>CS</name>
+					<ruleSet>
+	                   <predicate>gteq</predicate>					
+					   <expression>
+					         <question>bloodLoss</question>
+					         <edge>1000</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					
+					   <rule>
+                          <predicate>eq</predicate>					
+					   <expression>
+					         <question>typeOfDelivery</question>
+					         <edge>CS</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					      
+					 
+					</ruleSet>
+				</cluster>	
+					  	<cluster>
+				    <id>3.3</id>
+					<name>Not Entered</name>
+					<ruleSet>
+	                   <predicate>gteq</predicate>					
+					   <expression>
+					         <question>bloodLoss</question>
+					         <edge>1000</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					
+					   <rule>
+                          <predicate>eq</predicate>					
+					   <expression>
+					         <question>typeOfDelivery</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					      
+					 
+					</ruleSet>
+				</cluster>	
+	</clusterSet>
+
+			
+			<!--  third cluster blood Loss Unknown -->
+	<clusterSet>
+	            <id>4</id>
+		        <name><![CDATA[Not Entered]]></name>
+	
+	    	<cluster>
+				    <id>4.1</id>
+					<name>Vaginal </name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>bloodLoss</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+				
+					       <rule>
+                          <predicate>eq</predicate>					
+					   <expression>
+					         <question>typeOfDelivery</question>
+					         <edge>Vaginal</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					      
+					 
+					</ruleSet>
+				</cluster>	
+				
+	 	
+	
+	
+		  	<cluster>
+				    <id>4.2</id>
+					<name>CS</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>bloodLoss</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					
+					   <rule>
+                          <predicate>eq</predicate>					
+					   <expression>
+					         <question>typeOfDelivery</question>
+					         <edge>CS</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					      
+					 
+					</ruleSet>
+				</cluster>	
+					  	<cluster>
+				    <id>4.3</id>
+					<name>Not Entered</name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>bloodLoss</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					
+					   <rule>
+                          <predicate>eq</predicate>					
+					   <expression>
+					         <question>typeOfDelivery</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					 </rule>
+					      
+					 
+					</ruleSet>
+				</cluster>	
+	</clusterSet>
+			
+</clusters>

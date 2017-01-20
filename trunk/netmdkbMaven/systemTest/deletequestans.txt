@@ -1,0 +1,539 @@
+{
+    "credentials": {
+        "macId": "00-30-67-08-D3-02",
+        "passPhrase": "WxlVUTyYC+B+zcR6RYWaOw==",
+        "branchId": 172,
+        "headOfficeId": 120
+    },
+    "department": "Obstetrics",
+    "questionnaire": "Survey1",
+    "netMdAnswerSetList": [
+        {
+            "actionName": "DELETE",
+            "branchId": 172,
+            "answers": [
+                {
+                    "questionKey": "slNo",
+                    "answer": "123"
+                },
+                {
+                    "questionKey": "ipNumber",
+                    "answer": "123"
+                },
+                {
+                    "questionKey": "bookedUnbooked",
+                    "answer": "Booked"
+                },
+                {
+                    "questionKey": "unit",
+                    "answer": "233"
+                },
+                {
+                    "questionKey": "doctorIncharge",
+                    "answer": "Nithesh Mohanan"
+                },
+                {
+                    "questionKey": "name",
+                    "answer": "sandra thomas"
+                },
+                {
+                   "questionKey": "age",
+                    "answer": "24"
+                },
+                {
+                    "questionKey": "height",
+                    "answer": "176"
+                },
+                {
+                    "questionKey": "weight",
+                    "answer": "55"
+                },
+                {
+                    "questionKey": "bodymassIndex",
+                    "answer": "17.76"
+                },
+                {
+                    "questionKey": "bloodgroup",
+                    "answer": "O"
+                },
+                {
+                   "questionKey": "rh",
+                    "answer": "-ve"
+                },
+                {
+                    "questionKey": "education",
+                    "answer": "HigherSecondary"
+                },
+                {
+                    "questionKey": "husbandName",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "address",
+                    "answer": "Chirachi,\nOllur,\nThrissur"
+                },
+                {
+                    "questionKey": "phoneNumber",
+                    "answer": "9744558877"
+                },
+                {
+                   "questionKey": "religion",
+                    "answer": "Muslim"
+                },
+                {
+                    "questionKey": "isTribal",
+                    "answer": "Yes"
+                },
+                {
+                    "questionKey": "tribal",
+                    "answer": "Irulan"
+                },
+                {
+                    "questionKey": "dateofAdmissionHospital",
+                    "answer": "05/01/2014 08:58 AM"
+                },
+                {
+                    "questionKey": "previousCS",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "sameHospital",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "otherHospital",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "lmp",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "confinementDate",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "gestinationWeek",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "gestinationDay",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "gravidity",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "parity",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "abortion",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "livingChildren",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "molarPregnancy",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "ectopicPregnancy",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "lcb",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "multiplePregnancy",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "multiplePregnancyType",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "anemia",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "gestationalDiabetes",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "diabetesMellitus",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "heartDisease",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "heartRelatedDisease",
+                    "answer": "Unknown"
+                },
+                {
+                   "questionKey": "mildHyperTension",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "antiMildHyper",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "severeHyper",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "antiSevereHyper",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "detectionTreatmentInterval",
+                    "answer": "Unknown"
+                },
+                {
+                   "questionKey": "help",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "IsReceivedBloodProducts",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "IsReceivedICU",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "IsReceivedInduction",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "eclampsia",
+                    "answer": "Unknown"
+                },
+                {
+                   "questionKey": "isMgso4",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "previousSurgery",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "prevSurgeryDescription",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "isCerclage",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "cerclageType",
+                    "answer": "Unknown"
+                },
+                {
+
+                   "questionKey": "others",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "islabourInduced",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "labourDescription",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "induction",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "inductionDesc",
+                    "answer": "Unknown"
+                },
+                {
+                   "questionKey": "inductionType",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "inductionTypeDesc",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "outCome",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "indDelInterval",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "dateTimeDelivery",
+                    "answer": "05/02/2014 08:58 AM"
+                },
+                {
+                   "questionKey": "presentation",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "episiotomy",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "numberOfbaby",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "baby1Gender",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "baby1Weight",
+                    "answer": "Unknown"
+                },
+                {
+                   "questionKey": "baby1Apgaronemin",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "baby1Apgarfivemin",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "baby1Presentation",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "baby1DeliveryType",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "oxytoxinBolus",
+                    "answer": "Unknown"
+                },
+                {
+                   "questionKey": "extraOxytoxinUsed",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "oxytoxinDesc",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "otherOxytoxinUsed",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "otherOxytoxinDesc",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "thirdStageDuration",
+                    "answer": "Unknown"
+                },
+                {
+                  
+                    "questionKey": "thirdStageDesc",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "manualRml",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "manualRmlDesc",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "placentalWght",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "plwghtDesc",
+                    "answer": "Unknown"
+                },
+                {
+                  "questionKey": "isHypotension",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "hypotensionDesc",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "amtFluids",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "amtFluidsDesc",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "isfourthStageMon",
+                    "answer": "Unknown"
+                },
+                {
+                  "questionKey": "fourthStageDesc",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "prblmNoted",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "prblmNotedDesc",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "bloodLoss",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "bldlosDesc",
+                    "answer": "Unknown"
+                },
+                {
+                   "questionKey": "bloodProduct",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "prbcwholebld",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "FFP",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "platelets",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "icuAdminSameHsp",
+                    "answer": "Unknown"
+                },
+                {
+                   "questionKey": "isALSAmbulance",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "alsAmbulanceDesc",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "fetal1CongAnomali",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "fetal1NICU",
+                    "answer": "Unknown"
+                },
+                {
+
+                  "questionKey": "fetal1stillbirth",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "fetal1NeonatalDeath",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "plprevAclocal",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "plprevAclocalDesc",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "plprevAcReffered",
+                    "answer": "Unknown"
+                },
+                {
+
+                  "questionKey": "perinealTear",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "perinealTearType",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "cerebroVasPrb",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "cerebroVasPrbDesc",
+                    "answer": "Unknown"
+                },
+                {
+                   "questionKey": "sevMatMorbidility",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "sevMatMorbidilityDesc",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "maternalDeath",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "maternalDeathType",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "anyOther",
+                    "answer": "Unknown"
+                },
+                {
+                   "questionKey": "anyOtherDesc",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "deliveryType",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "deliveryName",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "indication",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "robsonclass",
+                    "answer": "Unknown"
+                },
+                {
+                  "questionKey": "remarks",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "specialPoints",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "conductedBy",
+                    "answer": "Unknown"
+                },
+                {
+                    "questionKey": "conductedByDesc",
+                    "answer": "Unknown"
+                }
+            ],
+            "questionRelevantDate": "2014-01-05",
+            "answerSetLocalId": 121,
+            "answerSetGlobalId": 1
+        }
+    ]
+}
+
+     

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clusters>
+     	<!--gestation between 20-27 -->	
+	<clusterSet>
+	
+			
+	        <id>1</id>
+		    <name>20-27</name>
+		        
+			    
+				<ruleSet>
+                       <predicate>gteq</predicate>					
+					   <expression>
+					         <question>gestationWeek</question>
+					         <edge>20</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					   <rule>
+					       <predicate>lteq</predicate>					
+					   <expression>
+					         <question>gestationWeek</question>
+					         <edge>27</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					      </rule>
+					
+					       
+					       
+				
+					   
+				</ruleSet>
+	</clusterSet>
+	
+
+	 <!--gestination between 28-36  -->	
+		<clusterSet>
+	
+			
+	        <id>2</id>
+		    <name>28-36</name>
+		        
+			    
+				<ruleSet>
+                       <predicate>gteq</predicate>					
+					   <expression>
+					         <question>gestationWeek</question>
+					         <edge>28</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					   <rule>
+					       <predicate>lteq</predicate>					
+					   <expression>
+					         <question>gestationWeek</question>
+					         <edge>36</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					    </rule>
+					 
+					   
+				</ruleSet>
+	    
+
+	</clusterSet>
+	    <!--gestination greater than 37   -->	
+<clusterSet>
+	
+			
+	        <id>3</id>
+		    <name>>=37</name>
+		        
+			    
+				<ruleSet>
+                       <predicate>gteq</predicate>					
+					   <expression>
+					         <question>gestationWeek</question>
+					         <edge>37</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					   
+					     
+					   
+				</ruleSet>
+	    
+
+	</clusterSet>
+	 <!--gestination Unknown   -->	
+		<clusterSet>
+	
+			
+	        <id>4</id>
+		    <name>Not Entered</name>
+		        
+			    
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>gestationWeek</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+  
+				</ruleSet>
+	    
+
+	</clusterSet>	
+</clusters>
