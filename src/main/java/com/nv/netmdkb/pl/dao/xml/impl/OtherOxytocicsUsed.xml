@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<clusters>
+     	
+    <!-- Methergin -->
+	
+	<clusterSet>
+	
+			
+	        <id>1</id>
+		        <name>Methergin</name>
+		        
+			    
+				<ruleSet>
+                       <predicate>in</predicate>					
+					   <expression>
+					         <question>otherOxytoxinUsed</question>
+					         <edge>Methergin</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	    
+			    </clusterSet>
+	 
+	      <!-- Methergin IV -->
+	
+	<clusterSet>
+	
+			
+	        <id>2</id>
+		        <name>Methergin IV</name>
+		        
+			  
+			   
+				<ruleSet>
+                       <predicate>in</predicate>					
+					   <expression>
+					         <question>otherOxytoxinUsed</question>
+					         <edge>Methergin IV</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+				
+				     
+	 </clusterSet>
+	 
+	 <clusterSet>
+	
+			
+	        <id>3</id>
+		        <name>Carboprost</name>
+		        
+			    
+			   
+				<ruleSet>
+                       <predicate>in</predicate>					
+					   <expression>
+					         <question>otherOxytoxinUsed</question>
+					         <edge>Carboprost</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+				
+	 </clusterSet>
+	 
+	 <clusterSet>
+	
+			
+	        <id>4</id>
+		        <name>Rectal Misoprostol</name>
+		        
+			   
+			   
+				<ruleSet>
+                       <predicate>in</predicate>					
+					   <expression>
+					         <question>otherOxytoxinUsed</question>
+					         <edge>Rectal Misoprostol</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+				
+	 </clusterSet>
+	 
+	  <clusterSet>
+	
+			
+	        <id>5</id>
+		        <name>Intra Uterine</name>
+		        
+			   
+			   
+				<ruleSet>
+                       <predicate>in</predicate>					
+					   <expression>
+					         <question>otherOxytoxinUsed</question>
+					         <edge>Intra Uterine</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+				 
+	 </clusterSet>
+	 
+	  <clusterSet>
+	
+			
+	        <id>6</id>
+		        <name>Pitocin</name>
+		        
+			   
+			   
+				<ruleSet>
+                       <predicate>in</predicate>					
+					   <expression>
+					         <question>otherOxytoxinUsed</question>
+					         <edge>Pitocin</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+				 
+	 </clusterSet>
+	 
+	  <clusterSet>
+	
+			
+	        <id>7</id>
+		        <name>Others</name>
+		        
+			   
+			   
+				<ruleSet>
+                       <predicate>in</predicate>					
+					   <expression>
+					         <question>otherOxytoxinUsed</question>
+					         <edge>Others</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+				
+	 </clusterSet>
+	 
+	 <clusterSet>
+	
+			
+	        <id>8</id>
+		        <name>Not Entered</name>
+		        
+			   
+			   
+				<ruleSet>
+                       <predicate>in</predicate>					
+					   <expression>
+					         <question>otherOxytoxinUsed</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+				
+	 </clusterSet>
+	 
+	 </clusters>
+	 
+	
+	    

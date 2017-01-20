@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clusters>
+     	<!-- Maternal mortality -->	
+	<clusterSet>
+	
+			
+	        <id>1</id>
+		    <name><![CDATA[HELP]]></name>
+		    <cluster>
+		         <id>1.1</id>
+		    <name><![CDATA[Yes]]></name>
+			    
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>help</question>
+					         <edge>yes</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	    
+            </cluster>
+            
+             <cluster>
+		         <id>1.2</id>
+		    <name><![CDATA[No]]></name>
+			    
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>help</question>
+					         <edge>no</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	    
+            </cluster>
+            
+		    <cluster>
+		         <id>1.3</id>
+		    <name><![CDATA[Not Entered]]></name>
+			    
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>help</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	    
+            </cluster>
+	</clusterSet>
+	
+		
+</clusters>

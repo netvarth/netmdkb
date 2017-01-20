@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<clusters>
+     		<!--relaxants 1-->
+	<clusterSet>
+	
+			
+	        <id>1</id>
+		        <name><![CDATA[Drotaverin]]></name>
+		        
+			    
+				<ruleSet>
+                       <predicate>in</predicate>					
+					   <expression>
+					         <question>muscleRelaxants</question>
+					         <edge>Drotaverin</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	</clusterSet>
+	
+
+		
+	<!--relaxants 2-->
+	<clusterSet>
+	
+			
+	        <id>2</id>
+		        <name><![CDATA[Valethamate]]></name>
+		        
+			    
+				<ruleSet>
+                       <predicate>in</predicate>					
+					   <expression>
+					         <question>muscleRelaxants</question>
+					         <edge>Valethamate</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	</clusterSet>
+	
+	
+	
+	<!--relaxants 3-->
+	
+	<clusterSet>
+	
+			
+	        <id>3</id>
+		        <name><![CDATA[Hyoscine]]></name>
+		        
+			    
+				<ruleSet>
+                       <predicate>in</predicate>					
+					   <expression>
+					         <question>muscleRelaxants</question>
+					         <edge>Hyoscine</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	</clusterSet>
+
+
+<clusterSet>
+	
+			
+	        <id>4</id>
+		        <name><![CDATA[Nil]]></name>
+		        
+			    
+				<ruleSet>
+                       <predicate>in</predicate>					
+					   <expression>
+					         <question>muscleRelaxants</question>
+					         <edge>Nil</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	</clusterSet>
+	
+		<clusterSet>
+	
+			
+	        <id>5</id>
+		        <name><![CDATA[Not Entered]]></name>
+		        
+			    
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>muscleRelaxants</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	</clusterSet>
+	
+	</clusters>
+	
+	

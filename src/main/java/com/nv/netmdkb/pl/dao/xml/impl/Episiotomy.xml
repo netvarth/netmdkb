@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<clusters>
+     	<!-- Midline Episiotomy -->
+	<clusterSet>
+	
+			
+	        <id>1</id>
+		        <name>Midline</name>
+		        
+			    
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>episiotomy</question>
+					         <edge>Midline Episiotomy</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	</clusterSet>
+				
+		<!-- Medio-Lateral Episiotomy-->		
+	<clusterSet>
+	
+			
+	        <id>2</id>
+		        <name>Medio-Lateral</name>
+		        
+			    
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>episiotomy</question>
+					         <edge>Medio-Lateral Episiotomy</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	</clusterSet>	
+	
+	<clusterSet>
+	
+			
+	        <id>3</id>
+		        <name>Nil</name>
+		        
+			    
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>episiotomy</question>
+					         <edge>Nil</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	</clusterSet>		
+	    
+	    		<!-- Unknown Episiotomy-->		
+	<clusterSet>
+	
+			
+	        <id>4</id>
+		        <name>Not Entered</name>
+		        
+			    
+				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>episiotomy</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	</clusterSet>	
+	    
+</clusters>

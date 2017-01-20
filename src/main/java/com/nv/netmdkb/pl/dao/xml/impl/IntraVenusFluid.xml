@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clusters>
+     	<!-- first cluster amtFluids less than 1000 -->	
+	<clusterSet>
+	
+			
+	        <id>1</id>
+		    <name><![CDATA[<1000]]></name>
+		        
+			    
+				<ruleSet>
+                       <predicate>lt</predicate>					
+					   <expression>
+					         <question>amtFluids</question>
+					         <edge>1000</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+				</ruleSet>
+	    
+
+	</clusterSet>
+	
+
+		        
+	<!-- second cluster amtFluids  BETWEEN 1000 and 3000-->	
+	<clusterSet>
+	        <id>2</id>
+		        <name><![CDATA[1000-3000]]></name>
+		       
+				<ruleSet>
+                       <predicate>gteq</predicate>					
+					   <expression>
+					         <question>amtFluids</question>
+					         <edge>1000</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					   <rule>
+					        <predicate>lteq</predicate>					
+					   <expression>
+					         <question>amtFluids</question>
+					         <edge>3000</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					   </rule>
+				</ruleSet>
+	    
+
+	</clusterSet>
+	             	<!-- third cluster amtFluids greater than 3000 -->	
+	<clusterSet>
+	
+	        <id>3</id>
+		        <name><![CDATA[>3000]]></name>
+		        
+			  				<ruleSet>
+                       <predicate>gt</predicate>					
+					   <expression>
+					         <question>amtFluids</question>
+					         <edge>3000</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					  
+				</ruleSet>
+
+	</clusterSet>
+	
+
+		             	<!-- fourth cluster amtFluids Unknown -->	
+	<clusterSet>
+	
+	        <id>4</id>
+		        <name><![CDATA[Not Entered]]></name>
+		        
+			  				<ruleSet>
+                       <predicate>eq</predicate>					
+					   <expression>
+					         <question>amtFluids</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>end</conjunction>
+					  
+				</ruleSet>
+
+	</clusterSet>
+			
+</clusters>

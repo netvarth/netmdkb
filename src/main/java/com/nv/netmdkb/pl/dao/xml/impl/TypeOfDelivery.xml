@@ -1,0 +1,1088 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clusters>
+     	<!-- first cluster Delivery Type -->	
+	<clusterSet>
+	
+			
+	        <id>1</id>
+		    <name><![CDATA[Spontaneous]]></name>
+		        
+
+	    	<cluster>
+				    <id>1.1</id>
+					<name><![CDATA[Normal]]></name>
+					<ruleSet>
+					    
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Spontaneous</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  
+					   <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Normal</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					    
+					</ruleSet>
+				</cluster>	
+				
+	 	
+	
+	
+		    
+	    	<cluster>
+				    <id>1.2</id>
+					<name><![CDATA[Forceps]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Spontaneous</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Forcepsdelivery</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>	
+					    
+	    	<cluster>
+				    <id>1.3</id>
+					<name><![CDATA[Vacuum]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Spontaneous</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Vacuumextraction</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>	
+				
+					<cluster>
+				    <id>1.4</id>
+					<name><![CDATA[Breech]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Spontaneous</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Breech</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+				
+				
+					<cluster>
+				    <id>1.5</id>
+					<name><![CDATA[Ceasarean]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Spontaneous</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Caesarean</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+					
+					
+					<cluster>
+				    <id>1.6</id>
+					<name><![CDATA[Sequential]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Spontaneous</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Sequential</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+					
+							<cluster>
+				    <id>1.7</id>
+					<name><![CDATA[VBAC]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Spontaneous</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>VBAC</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+				
+								<cluster>
+				    <id>1.8</id>
+					<name><![CDATA[others]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Spontaneous</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>others</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+					
+						<cluster>
+				    <id>1.9</id>
+					<name><![CDATA[Not Entered]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Spontaneous</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					   <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+				
+	</clusterSet>
+	
+
+		<clusterSet>
+	
+			
+	        <id>2</id>
+		    <name><![CDATA[Induced]]></name>
+		        
+
+	    	
+	    		    	<cluster>
+				    <id>2.1</id>
+					<name><![CDATA[Normal]]></name>
+					<ruleSet>
+					    
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Induced</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  
+					   <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Normal</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					    
+					</ruleSet>
+				</cluster>	
+				
+	 	
+	
+	
+		    
+	    	<cluster>
+				    <id>2.2</id>
+					<name><![CDATA[Forceps]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Induced</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Forcepsdelivery</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>	
+					    
+	    	<cluster>
+				    <id>2.3</id>
+					<name><![CDATA[Vacuum]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Induced</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Vacuumextraction</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>	
+				
+					<cluster>
+				    <id>2.4</id>
+					<name><![CDATA[Breech]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Induced</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Breech</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+				
+				
+					<cluster>
+				    <id>2.5</id>
+					<name><![CDATA[Ceasarean]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Induced</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Caesarean</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+					
+					
+					<cluster>
+				    <id>2.6</id>
+					<name><![CDATA[Sequential]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Induced</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Sequential</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+					
+							<cluster>
+				    <id>2.7</id>
+					<name><![CDATA[VBAC]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Induced</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>VBAC</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+				
+								<cluster>
+				    <id>2.8</id>
+					<name><![CDATA[others]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Induced</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>others</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+					
+						<cluster>
+				    <id>2.9</id>
+					<name><![CDATA[Not Entered]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Induced</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					   <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+				
+	</clusterSet>
+	
+	<clusterSet>
+	
+			
+	        <id>3</id>
+		    <name><![CDATA[Elective]]></name>
+		        
+
+	    	
+	    		    	<cluster>
+				    <id>3.1</id>
+					<name><![CDATA[Normal]]></name>
+					<ruleSet>
+					    
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Elective</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  
+					   <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Normal</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					    
+					</ruleSet>
+				</cluster>	
+				
+	 	
+	
+	
+		    
+	    	<cluster>
+				    <id>3.2</id>
+					<name><![CDATA[Forceps]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Elective</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Forcepsdelivery</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>	
+					    
+	    	<cluster>
+				    <id>3.3</id>
+					<name><![CDATA[Vacuum]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Elective</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Vacuumextraction</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>	
+				
+					<cluster>
+				    <id>3.4</id>
+					<name><![CDATA[Breech]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Elective</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Breech</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+				
+				
+					<cluster>
+				    <id>3.5</id>
+					<name><![CDATA[Ceasarean]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Elective</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Caesarean</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+					
+					
+					<cluster>
+				    <id>3.6</id>
+					<name><![CDATA[Sequential]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Elective</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Sequential</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+					
+							<cluster>
+				    <id>3.7</id>
+					<name><![CDATA[VBAC]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Elective</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>VBAC</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+				
+								<cluster>
+				    <id>3.8</id>
+					<name><![CDATA[others]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Elective</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>others</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+					
+						<cluster>
+				    <id>3.9</id>
+					<name><![CDATA[Not Entered]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Elective</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					   <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+				
+	</clusterSet>
+	
+	<clusterSet>
+	
+			
+	        <id>4</id>
+		    <name><![CDATA[Emergency]]></name>
+		        
+
+	    	
+	    		    	<cluster>
+				    <id>4.1</id>
+					<name><![CDATA[Normal]]></name>
+					<ruleSet>
+					    
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Emergency</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  
+					   <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Normal</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					    
+					</ruleSet>
+				</cluster>	
+				
+	 	
+	
+	
+		    
+	    	<cluster>
+				    <id>4.2</id>
+					<name><![CDATA[Forceps]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Emergency</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Forcepsdelivery</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>	
+					    
+	    	<cluster>
+				    <id>4.3</id>
+					<name><![CDATA[Vacuum]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Emergency</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Vacuumextraction</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>	
+
+		<cluster>
+				    <id>4.4</id>
+					<name><![CDATA[Breech]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Emergency</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Breech</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>					
+
+
+
+				
+					<cluster>
+				    <id>4.5</id>
+					<name><![CDATA[Ceasarean]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Emergency</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Caesarean</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+					
+					
+					<cluster>
+				    <id>4.6</id>
+					<name><![CDATA[Sequential]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Emergency</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Sequential</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+					
+							<cluster>
+				    <id>4.7</id>
+					<name><![CDATA[VBAC]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Emergency</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>VBAC</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+				
+								<cluster>
+				    <id>4.8</id>
+					<name><![CDATA[others]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Emergency</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>others</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+					
+						<cluster>
+				    <id>4.9</id>
+					<name><![CDATA[Not Entered]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Emergency</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					   <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+				
+	</clusterSet>
+	
+	<clusterSet>
+	
+			
+	        <id>5</id>
+		    <name><![CDATA[Not Entered]]></name>
+		        
+
+	    	
+	    		    	<cluster>
+				    <id>5.1</id>
+					<name><![CDATA[Normal]]></name>
+					<ruleSet>
+					    
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  
+					   <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Normal</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					    
+					</ruleSet>
+				</cluster>	
+				
+	 	
+	
+	
+		    
+	    	<cluster>
+				    <id>5.2</id>
+					<name><![CDATA[Forceps]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					 <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Forcepsdelivery</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>	
+					    
+	    	<cluster>
+				    <id>5.3</id>
+					<name><![CDATA[Vacuum]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Vacuumextraction</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>	
+
+		<cluster>
+				    <id>5.4</id>
+					<name><![CDATA[Breech]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Breech</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>					
+
+
+
+				
+					<cluster>
+				    <id>5.5</id>
+					<name><![CDATA[Ceasarean]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Caesarean</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+					
+					
+					<cluster>
+				    <id>5.6</id>
+					<name><![CDATA[Sequential]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Sequential</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+					
+							<cluster>
+				    <id>5.7</id>
+					<name><![CDATA[VBAC]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>VBAC</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+				
+								<cluster>
+				    <id>5.8</id>
+					<name><![CDATA[others]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					  <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>others</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+					
+						<cluster>
+				    <id>5.9</id>
+					<name><![CDATA[Not Entered]]></name>
+					<ruleSet>
+	                   <predicate>eq</predicate>					
+					   <expression>
+					         <question>deliveryType</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					   <conjunction>and</conjunction>
+					   <rule>
+                          <predicate>in</predicate>					
+					   <expression>
+					         <question>deliveryName</question>
+					         <edge>Unknown</edge>
+					   </expression>
+					  <conjunction>end</conjunction>
+					  </rule>
+					 
+					</ruleSet>
+				</cluster>
+				
+	</clusterSet>
+			
+</clusters>
