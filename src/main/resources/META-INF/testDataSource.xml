@@ -7,17 +7,12 @@
         http://www.springframework.org/schema/beans 
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
-
-<bean id="datasource.jndi"
-        class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-     
-        <property name="url"  value="${mysql.ip.address}youneverwait"/>
+<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		id="datasource.jndi">
+		 <property name="url"  value="${mysql.ip.address}youneverwait"/>
         <property name="username"  value ="${mysql.username}"/>
         <property name="password" value ="${mysql.password}" /> 
-
 </bean>
-
 
 <bean class="org.codehaus.jackson.map.ObjectMapper" id="jacksonObjectMapper" >
 	     <property name="dateFormat">

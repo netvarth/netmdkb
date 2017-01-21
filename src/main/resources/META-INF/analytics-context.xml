@@ -47,7 +47,7 @@
 		<property name="securityHandler">
 			<ref bean="sync.authentication.handler" />
 		</property>
-		
+
 		<property name="analyserMap">
 
 			<map>
@@ -81,21 +81,20 @@
 	<bean id="obstetrics.listener.factory"
 		class="com.nv.netmdkb.analytic.obstetrics.listener.InformationListenerFactory">
 
-        <property name="questionnaires" >
-             <list value-type="java.lang.String">
-               <value>Survey1</value>   
-             </list>
-        </property>
+		<constructor-arg index="0">
+			<list value-type="java.lang.String">
+				<value>Survey1</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg index="1" ref="analytic.dao" />
 
-		<property name="analyticDao">
-			<ref bean="analytic.dao" />
-		</property>
 	</bean>
-	
-	
-	
 
-	<bean id="obstretrics.analyser" class="com.nv.netmdkb.analytic.obstetrics.ObstetricsAnalyser" init-method="init">
+
+
+
+	<bean id="obstretrics.analyser" class="com.nv.netmdkb.analytic.obstetrics.ObstetricsAnalyser"
+		init-method="init">
 
 		<property name="questionAnswer">
 			<ref bean="qa.dao" />
@@ -104,20 +103,20 @@
 		<property name="source">
 			<ref bean="root.analyser" />
 		</property>
-		
+
 		<property name="questionnaireId" value="Survey1" />
 
 	</bean>
 
 	<bean id="root.analyser" class="com.nv.netmdkb.analytic.bl.analyser.AnalyserCore">
-	     <constructor-arg ref ="total.listeners"/>
+		<constructor-arg ref="total.listeners" />
 	</bean>
 
 
 
 	<bean id="obstretrics.report.generator"
 		class="com.nv.netmdkb.analytic.obstetrics.report.ObstetricsReportGenerator">
-        <constructor-arg ref="obstetrics.listeners"></constructor-arg>
+		<constructor-arg ref="obstetrics.listeners"></constructor-arg>
 	</bean>
 
 
@@ -163,14 +162,14 @@
 		</property>
 		<property name="jrxml" value="vertical" />
 	</bean>
-    
-		
+
+
 	<bean id="graph.coordinate"
 		class="com.nv.netmdkb.analytic.obstetrics.report.GraphCoordinate">
 		<property name="reportGenerator">
 			<ref bean="obstretrics.report.generator" />
 		</property>
-		
+
 	</bean>
 	<bean id="cluster.parser" class="com.nv.netmdkb.pl.dao.xml.impl.ClusterXmlParser"
 		init-method="init">
@@ -180,17 +179,27 @@
 		<property name="questionnaireId" value="Survey1" />
 	</bean>
 
-     <bean id="total.listeners" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
-            <property name="targetObject"><ref bean="obstetrics.listener.factory"/></property>
-            <property name="targetMethod"><value>getTotalListeners</value></property>
-    </bean>
-     
-     <bean id="obstetrics.listeners" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
-            <property name="targetObject"><ref bean="obstetrics.listener.factory"/></property>
-            <property name="targetMethod"><value>getListeners</value></property>
-            <property name="arguments" value="Survey1"/>
-     </bean>
-     
+	<bean id="total.listeners"
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="targetObject">
+			<ref bean="obstetrics.listener.factory" />
+		</property>
+		<property name="targetMethod">
+			<value>getTotalListeners</value>
+		</property>
+	</bean>
+
+	<bean id="obstetrics.listeners"
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="targetObject">
+			<ref bean="obstetrics.listener.factory" />
+		</property>
+		<property name="targetMethod">
+			<value>getListeners</value>
+		</property>
+		<property name="arguments" value="Survey1" />
+	</bean>
+
 
 </beans>		
 	

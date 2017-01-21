@@ -31,6 +31,11 @@ public class InformationListenerFactory  implements ApplicationContextAware{
     
 	
 	
+    public InformationListenerFactory(List<String> questionnaires, AnalyticDao analyticDao ){
+    	this.questionnaires=questionnaires;
+    	this.analyticDao= analyticDao;
+    }
+    
 
 	/**
 	 * @return the applicationContext

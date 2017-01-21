@@ -2,6 +2,11 @@ package com.nv.netmdkb.pl.dao.xml.impl;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +39,9 @@ public class ClusterXmlParser implements Parser<Cluster> {
 		
 		List<Cluster> clusters=new ArrayList<Cluster>();
 		try {
-			InputStream in =this.getClass().getResourceAsStream(xmlpath);
+			
+			 
+			InputStream in =Thread.currentThread().getContextClassLoader().getResourceAsStream(xmlpath);
 			SAXParser parser = parserFactory.newSAXParser();
 			handler= new ClusterParserHandler();
 			handler.setQuestionnare(questionnaire);
@@ -59,7 +66,7 @@ public class ClusterXmlParser implements Parser<Cluster> {
 			System.out.println("IO error");
 			throw new ServiceException(ErrorCodeEnum.INVALIDDATA);
 
-		}
+		} 
 		return clusters;
 	}
 

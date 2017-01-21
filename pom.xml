@@ -9,9 +9,9 @@
 	<description>Gynaecology</description>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<org.springframework.version>3.1.1.RELEASE</org.springframework.version>
-        <java.version>1.8</java.version>
-        <maven.compiler.plugin.version>3.6.0</maven.compiler.plugin.version>
+		<org.springframework.version>4.3.1.RELEASE</org.springframework.version>
+		<java.version>1.8</java.version>
+		<maven.compiler.plugin.version>3.6.0</maven.compiler.plugin.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -20,12 +20,7 @@
 			<version>1.4</version>
 		</dependency>
 
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.7</version>
 
-		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -57,52 +52,52 @@
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-expression</artifactId>
-			<version>${org.springframework.version}</version>
-		</dependency>
+
+		
+
+
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
+
+
+
+
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
+
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>${org.springframework.version}</version>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-aop</artifactId>
-			<version>${org.springframework.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-beans</artifactId>
-			<version>${org.springframework.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>${org.springframework.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-oxm</artifactId>
-			<version>${org.springframework.version}</version>
-		</dependency>
+
 
 		<dependency>
 			<groupId>commons-email</groupId>
@@ -175,15 +170,15 @@
 			<artifactId>commons-validator</artifactId>
 			<version>1.3.1</version>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>javax.activation</groupId> -->
-<!-- 			<artifactId>activation</artifactId> -->
-<!-- 			<version>1.1</version> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>javax.activation</groupId> -->
+		<!-- <artifactId>activation</artifactId> -->
+		<!-- <version>1.1</version> -->
+		<!-- </dependency> -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.10</version>
+			<version>5.1.6</version>
 		</dependency>
 
 		<dependency>
@@ -196,15 +191,11 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>4.3.6.Final</version>
+			<version>5.2.3.Final</version>
 		</dependency>
 
 
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>4.3.5.Final</version>
-		</dependency>
+
 
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
@@ -226,7 +217,7 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
-   
+
 
 		<dependency>
 			<groupId>org.apache.maven.plugins</groupId>
@@ -234,19 +225,19 @@
 			<version>2.4.3</version>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
-	
+
 		<plugins>
-		    <plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>${maven.compiler.plugin.version}</version>
-					<configuration>
-						<source>${java.version}</source>
-						<target>${java.version}</target>
-					</configuration>
-				</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.plugin.version}</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
 
 			<!-- specifying location and name of war -->
 			<plugin>
@@ -271,16 +262,16 @@
 					<webXml>src\main\resources\web.xml</webXml>
 
 
-				<outputDirectory>/ebs/apache-tomcat-8.0.36/webapps</outputDirectory>
-					<!-- <outputDirectory>C:/Installations/apache-tomcat-8.0.30/webapps/</outputDirectory> -->
+					<!-- <outputDirectory>/ebs/apache-tomcat-8.0.36/webapps</outputDirectory> -->
+					<outputDirectory>C:/Installations/apache-tomcat-8.0.30/webapps/</outputDirectory>
 					<warName>ROOT</warName>
 
 				</configuration>
 			</plugin>
 
-          
+
 		</plugins>
-		
+
 	</build>
 
 
