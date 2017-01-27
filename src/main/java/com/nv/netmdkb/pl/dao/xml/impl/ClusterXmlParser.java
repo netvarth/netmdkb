@@ -1,5 +1,6 @@
 package com.nv.netmdkb.pl.dao.xml.impl;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
@@ -39,9 +40,11 @@ public class ClusterXmlParser implements Parser<Cluster> {
 		
 		List<Cluster> clusters=new ArrayList<Cluster>();
 		try {
+			InputStream in;
 			
-			 
-			InputStream in =Thread.currentThread().getContextClassLoader().getResourceAsStream(xmlpath);
+			in =Thread.currentThread().getContextClassLoader().getResourceAsStream(xmlpath);
+		  /*  if (in==null)
+			in =this.getClass().getResourceAsStream(File.pathSeparator+xmlpath);*/
 			SAXParser parser = parserFactory.newSAXParser();
 			handler= new ClusterParserHandler();
 			handler.setQuestionnare(questionnaire);

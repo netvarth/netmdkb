@@ -18,7 +18,7 @@ import com.nv.netmdkb.rs.dto.Inference;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:META-INF/testDataSource.xml","classpath:META-INF/context.xml",  "classpath:META-INF/analytics-context.xml" })
+@ContextConfiguration(locations={"classpath:META-INF/testDataSource.xml","classpath:META-INF/persistence-context.xml",  "classpath:META-INF/analytics-context.xml" })
 
 
 public class InformationListenerTest {

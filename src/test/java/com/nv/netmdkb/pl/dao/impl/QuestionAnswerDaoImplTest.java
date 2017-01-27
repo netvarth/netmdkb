@@ -1,9 +1,5 @@
 package com.nv.netmdkb.pl.dao.impl;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,15 +7,12 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.nv.netmdkb.analytic.bl.ActionEnum;
 import com.nv.netmdkb.pl.dao.QuestionAnswerDao;
 import com.nv.netmdkb.questionnaire.Question;
 import com.nv.netmdkb.questionnaire.Questionnaire;
-import com.nv.netmdkb.rs.dto.NetMdAnswer;
-import com.nv.netmdkb.rs.dto.NetMdAnswerSet;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:META-INF/testDataSource.xml","classpath:META-INF/context.xml",  "classpath:META-INF/analytics-context.xml" })
+@ContextConfiguration(locations={"classpath:META-INF/testDataSource.xml","classpath:META-INF/persistence-context.xml",  "classpath:META-INF/analytics-context.xml" })
 
 
 

@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.nv.framework.util.text.StringEncoder;
+import com.nv.platform.base.util.StringEncoder;
 import com.nv.netmdkb.exception.ErrorCodeEnum;
 import com.nv.netmdkb.exception.ServiceException;
 import com.nv.netmdkb.facade.LoginFacade;

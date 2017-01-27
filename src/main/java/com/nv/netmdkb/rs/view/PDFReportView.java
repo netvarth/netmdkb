@@ -9,6 +9,7 @@ import java.io.OutputStream;
 import java.sql.SQLException;
 import java.util.Map;
 
+import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,8 +26,9 @@ import org.springframework.web.servlet.View;
  */
 public class PDFReportView  implements View  {
 
-	@PersistenceContext()
-	private static final String CONTENT_TYPE = "application/pdf";
+	
+	
+	private final String CONTENT_TYPE = "application/pdf";
 	
 
 	@Override

@@ -1,12 +1,12 @@
 package com.nv.netmdkb.analytic.bl.dataPoint;
 
 
+
 import static org.junit.Assert.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import junit.framework.Assert;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +22,7 @@ import com.nv.netmdkb.questionnaire.Question;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:META-INF/testDataSource.xml","classpath:META-INF/context.xml",  "classpath:META-INF/analytics-context.xml" })
+@ContextConfiguration(locations={"classpath:META-INF/testDataSource.xml","classpath:META-INF/persistence-context.xml",  "classpath:META-INF/analytics-context.xml" })
 
 
 
@@ -62,9 +62,8 @@ public class DataPointTest {
 		  expectedMap.put("2.2.2",1);
 	      expectedMap.put("2.2.1",0);
 	      expectedMap.put("1.1.2",1);
-	       // assertTrue(valueMap.equals(expectedMap));
-		  Assert.assertEquals(expectedMap, valueMap);	
-  
+	        assertTrue(valueMap.equals(expectedMap));
+		
 		  
 	  }
 	  
@@ -101,7 +100,7 @@ public class DataPointTest {
 	      expectedMap.put("2.2.1",1);
 	      expectedMap.put("1.1.2",0);
 	        assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap, valueMap);	
+			
 		  
 	  }
 	  
@@ -138,7 +137,7 @@ public class DataPointTest {
 	      expectedMap.put("2.2.1",1);
 	      expectedMap.put("1.1.2",0);
 	      assertTrue(valueMap.equals(expectedMap));
-		  Assert.assertEquals(expectedMap, valueMap);	
+		  	
   
 		  
 	  }
@@ -191,8 +190,8 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      expectedMap.put("3.3.1",0);
 	      expectedMap.put("3.3.4",0);
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	        assertTrue(valueMap.equals(expectedMap));
+			 
   
 		  
 	  }
@@ -247,8 +246,8 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      expectedMap.put("3.3.1",0);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	      assertTrue(valueMap.equals(expectedMap));
+			 
   
 		  
 	  }
@@ -302,8 +301,8 @@ public class DataPointTest {
 	      expectedMap.put("3.3.1",1);
 	      expectedMap.put("3.3.4",0);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	       assertTrue(valueMap.equals(expectedMap));
+				 
   
 		  
 	  }
@@ -355,8 +354,8 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      expectedMap.put("3.3.1",0);
 	      expectedMap.put("3.3.4",0);    
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	       assertTrue(valueMap.equals(expectedMap));
+				 
   
 		  
 	  }
@@ -407,8 +406,8 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      expectedMap.put("3.3.1",0);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	       assertTrue(valueMap.equals(expectedMap));
+			 
   
 		  
 	  }
@@ -453,8 +452,8 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      expectedMap.put("3.3.1",0);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	       assertTrue(valueMap.equals(expectedMap));
+			
   
 		  
 	  }
@@ -503,8 +502,8 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      expectedMap.put("3.3.1",0);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	       assertTrue(valueMap.equals(expectedMap));
+			
   
 		  
 	  }
@@ -550,8 +549,8 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      expectedMap.put("3.3.1",0);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	       assertTrue(valueMap.equals(expectedMap));
+			 
   
 		  
 	  }
@@ -598,8 +597,8 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      expectedMap.put("3.3.1",0);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	       assertTrue(valueMap.equals(expectedMap));
+			 
   
 		  
 	  }
@@ -646,8 +645,8 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      expectedMap.put("3.3.1",0);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	       assertTrue(valueMap.equals(expectedMap));
+				 
   
 		  
 	  }
@@ -693,7 +692,7 @@ public class DataPointTest {
 	      
 	      
 	        assertTrue(valueMap.equals(expectedMap));
-		//	Assert.assertEquals(expectedMap,valueMap);	 
+		
   
 		  
 	  }
@@ -738,8 +737,8 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      expectedMap.put("3.3.1",0);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	       assertTrue(valueMap.equals(expectedMap));
+				 
   
 		  
 	  }
@@ -781,8 +780,8 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      /*expectedMap.put("3.3.1",1);*/
 	      expectedMap.put("3.3.1",0);    
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	        assertTrue(valueMap.equals(expectedMap));
+				 
   
 		  
 	  }
@@ -825,8 +824,8 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      expectedMap.put("3.3.1",0);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	       assertTrue(valueMap.equals(expectedMap));
+			;	 
   
 		  
 	  }
@@ -857,8 +856,8 @@ public class DataPointTest {
 	      expectedMap.put("2.2",0);
 	      expectedMap.put("1.1",1);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	       assertTrue(valueMap.equals(expectedMap));
+			 
   
 		  
 	  }
@@ -890,8 +889,8 @@ public class DataPointTest {
 	      expectedMap.put("2.2",1);
 	      expectedMap.put("1.1",0);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	       assertTrue(valueMap.equals(expectedMap));
+			 
   
 		  
 	  }
@@ -922,8 +921,8 @@ public class DataPointTest {
 	      expectedMap.put("2.2",0);
 	      expectedMap.put("1.1",0);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	       assertTrue(valueMap.equals(expectedMap));
+				 
   
 		  
 	  }
@@ -954,8 +953,8 @@ public class DataPointTest {
 	      expectedMap.put("2.2",0);
 	      expectedMap.put("1.1",0);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	       assertTrue(valueMap.equals(expectedMap));
+				 
   
 		  
 	  }
@@ -986,8 +985,8 @@ public class DataPointTest {
 	      expectedMap.put("2.2",0);
 	      expectedMap.put("1.1",0);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	       assertTrue(valueMap.equals(expectedMap));
+				 
   
 		  
 	  }
@@ -1015,8 +1014,8 @@ public class DataPointTest {
 	      expectedMap.put("2.2",0);
 	      expectedMap.put("1.1",1);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	       assertTrue(valueMap.equals(expectedMap));
+			
   
 		  
 	  }
@@ -1046,8 +1045,8 @@ public class DataPointTest {
 	      expectedMap.put("2.2",1);
 	      expectedMap.put("1.1",0);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	        assertTrue(valueMap.equals(expectedMap));
+			
   
 		  
 	  }
@@ -1075,8 +1074,8 @@ public class DataPointTest {
 	      expectedMap.put("2.2",0);
 	      expectedMap.put("1.1",0);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	        assertTrue(valueMap.equals(expectedMap));
+				 
   
 		  
 	  }
@@ -1103,8 +1102,8 @@ public class DataPointTest {
 	      expectedMap.put("2.2",0);
 	      expectedMap.put("1.1",0);
 	   	      
-	       // assertTrue(valueMap.equals(expectedMap));
-			Assert.assertEquals(expectedMap,valueMap);	 
+	        assertTrue(valueMap.equals(expectedMap));
+		
   
 		  
 	  }
@@ -1135,7 +1134,7 @@ public class DataPointTest {
 	      expectedMap.put("2.2",0);
 	      expectedMap.put("1.1",1);
 	   	      
-			Assert.assertEquals(expectedMap,valueMap);	 
+			assertEquals(expectedMap,valueMap);	 
   
 		  
 	  }
@@ -1163,7 +1162,7 @@ public class DataPointTest {
 	      expectedMap.put("2.2",1);
 	      expectedMap.put("1.1",0);
 	   	      
-			Assert.assertEquals(expectedMap,valueMap);	 
+			assertEquals(expectedMap,valueMap);	 
   
 		  
 	  }
@@ -1190,7 +1189,7 @@ public class DataPointTest {
 	      expectedMap.put("2.2",0);
 	      expectedMap.put("1.1",0);
 	   	      
-			Assert.assertEquals(expectedMap,valueMap);	 
+			assertEquals(expectedMap,valueMap);	 
   
 		  
 	  }
@@ -1222,7 +1221,7 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      expectedMap.put("3.3.1",0);
 	   	      
-			Assert.assertEquals(expectedMap,valueMap);	 
+			assertEquals(expectedMap,valueMap);	 
   
 		  
 	  }
@@ -1253,7 +1252,7 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      expectedMap.put("3.3.1",0);
 	   	      
-			Assert.assertEquals(expectedMap,valueMap);	 
+			assertEquals(expectedMap,valueMap);	 
   
 		  
 	  }
@@ -1284,7 +1283,7 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      expectedMap.put("3.3.1",1);
 	   	      
-			Assert.assertEquals(expectedMap,valueMap);	 
+			assertEquals(expectedMap,valueMap);	 
   
 		  
 	  }
@@ -1312,7 +1311,7 @@ public class DataPointTest {
 		    expectedMap.put("2.2",0);
 		    expectedMap.put("1.1",1);
 	   	      
-			Assert.assertEquals(expectedMap,valueMap);	 
+			assertEquals(expectedMap,valueMap);	 
   
 		  
 	  }
@@ -1340,7 +1339,7 @@ public class DataPointTest {
 		    expectedMap.put("2.2",1);
 		    expectedMap.put("1.1",0);
 	   	      
-			Assert.assertEquals(expectedMap,valueMap);	 
+			assertEquals(expectedMap,valueMap);	 
   
 		  
 	  }
@@ -1368,7 +1367,7 @@ public class DataPointTest {
 		    expectedMap.put("2.2",0);
 		    expectedMap.put("1.1",0);
 	   	      
-			Assert.assertEquals(expectedMap,valueMap);	 
+			assertEquals(expectedMap,valueMap);	 
   
 		  
 	  }
@@ -1421,7 +1420,7 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      expectedMap.put("3.3.1",0);*/
 	      //  assertTrue(valueMap.equals(expectedMap));
-		 Assert.assertEquals(expectedMap, valueMap);	
+		 assertEquals(expectedMap, valueMap);	
   
 		  
 	  }
@@ -1472,7 +1471,7 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      expectedMap.put("3.3.1",0);*/
 	      //  assertTrue(valueMap.equals(expectedMap));
-		 Assert.assertEquals(expectedMap, valueMap);	
+		 assertEquals(expectedMap, valueMap);	
   
 		  
 	  }
@@ -1522,7 +1521,7 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",0);
 	      expectedMap.put("3.3.1",0);*/
 	      //  assertTrue(valueMap.equals(expectedMap));
-		 Assert.assertEquals(expectedMap, valueMap);	
+		 assertEquals(expectedMap, valueMap);	
   
 		  
 	  }
@@ -1571,7 +1570,7 @@ public class DataPointTest {
 	      expectedMap.put("3.3.2",1);
 	      expectedMap.put("3.3.1",0);*/
 	      //  assertTrue(valueMap.equals(expectedMap));
-		 Assert.assertEquals(expectedMap, valueMap);	
+		 assertEquals(expectedMap, valueMap);	
   
 		  
 	  }
@@ -1601,7 +1600,7 @@ public class DataPointTest {
 		    expectedMap.put("2.2",0);
 		    expectedMap.put("1.1",1);
 	   	      
-			Assert.assertEquals(expectedMap,valueMap);	 
+			assertEquals(expectedMap,valueMap);	 
   
 		  
 	  }
@@ -1630,7 +1629,7 @@ public class DataPointTest {
 		    expectedMap.put("2.2",1);
 		    expectedMap.put("1.1",0);
 	   	      
-			Assert.assertEquals(expectedMap,valueMap);	 
+			assertEquals(expectedMap,valueMap);	 
   
 		  
 	  }
@@ -1660,7 +1659,7 @@ public class DataPointTest {
 		    expectedMap.put("2.2",0);
 		    expectedMap.put("1.1",0);
 	   	      
-			Assert.assertEquals(expectedMap,valueMap);	 
+			assertEquals(expectedMap,valueMap);	 
   
 		  
 	  }
@@ -1689,7 +1688,7 @@ public class DataPointTest {
 		    expectedMap.put("2.2",0);
 		    expectedMap.put("1.1",0);
 	   	      
-			Assert.assertEquals(expectedMap,valueMap);	 
+			assertEquals(expectedMap,valueMap);	 
   
 		  
 	  }
@@ -1718,7 +1717,7 @@ public class DataPointTest {
 		      expectedMap.put("6.6",0);
 		      expectedMap.put("1.1",0);
 		     assertTrue(valueMap.equals(expectedMap));
-			 Assert.assertEquals(expectedMap,valueMap);	 
+			 assertEquals(expectedMap,valueMap);	 
 	  
 			  
 		  }
@@ -1748,7 +1747,7 @@ public class DataPointTest {
 		      expectedMap.put("5.5",0);
 		      expectedMap.put("6.6",0);
 		      assertTrue(valueMap.equals(expectedMap));
-		      Assert.assertEquals(expectedMap, valueMap);	 
+		      assertEquals(expectedMap, valueMap);	 
 	  
 			  
 		  }
@@ -1779,7 +1778,7 @@ public class DataPointTest {
 		      expectedMap.put("6.6",0);
 		   
 		      assertTrue(valueMap.equals(expectedMap));
-		      Assert.assertEquals(expectedMap, valueMap);	 
+		      assertEquals(expectedMap, valueMap);	 
 	  
 			  
 		  }
@@ -1810,7 +1809,7 @@ public class DataPointTest {
 		      expectedMap.put("6.6",0);
 		   
 		      assertTrue(valueMap.equals(expectedMap));
-		      Assert.assertEquals(expectedMap, valueMap);	 
+		      assertEquals(expectedMap, valueMap);	 
 	  
 			  
 		  }
@@ -1858,7 +1857,7 @@ public class DataPointTest {
 		      
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	 
+				assertEquals(expectedMap,valueMap);	 
 	  
 			  
 		  }
@@ -1902,7 +1901,7 @@ public class DataPointTest {
 		      expectedMap.put("5.5.3",0);
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	 
+				assertEquals(expectedMap,valueMap);	 
 	  
 			  
 		  }
@@ -1945,7 +1944,7 @@ public class DataPointTest {
 		      expectedMap.put("5.5.3",0);
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	 
+				assertEquals(expectedMap,valueMap);	 
 	  
 			  
 		  }
@@ -1983,7 +1982,7 @@ public class DataPointTest {
 		      expectedMap.put("5.5.2",0);
 		      expectedMap.put("5.5.3",1);    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	 
+				assertEquals(expectedMap,valueMap);	 
 	  
 			  
 		  }
@@ -2013,7 +2012,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1",1);
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	 
+				assertEquals(expectedMap,valueMap);	 
 	  
 			  
 		  }
@@ -2044,7 +2043,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1",0);
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2074,7 +2073,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1",0);
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2104,7 +2103,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1",0);
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2135,7 +2134,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1",0);
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2166,7 +2165,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1",1);
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2196,7 +2195,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1",0);
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2228,7 +2227,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1",0);
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2258,7 +2257,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1",0);
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2288,7 +2287,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1",0);
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2318,7 +2317,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1",0);
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2347,7 +2346,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.3",0);
 		      expectedMap.put("2.2.3",0);
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2378,7 +2377,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.1",0);
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2405,7 +2404,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1",0);
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2434,7 +2433,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1",0);
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2464,7 +2463,7 @@ public class DataPointTest {
 		   /*   expectedMap.put("5.5",0);*/
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2493,7 +2492,7 @@ public class DataPointTest {
 		     /* expectedMap.put("5.5",0);*/
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2522,7 +2521,7 @@ public class DataPointTest {
 		     /* expectedMap.put("5.5",0);*/
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2551,7 +2550,7 @@ public class DataPointTest {
 		  /*    expectedMap.put("5.5",0);*/
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2591,7 +2590,7 @@ public class DataPointTest {
 		      expectedMap.put("7.6",0);
 			  
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2621,7 +2620,7 @@ public class DataPointTest {
 		      expectedMap.put("6.5",0);
 		      expectedMap.put("7.6",0);    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2651,7 +2650,7 @@ public class DataPointTest {
 		      expectedMap.put("6.5",0);
 		      expectedMap.put("7.6",0);    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2682,7 +2681,7 @@ public class DataPointTest {
 		      expectedMap.put("7.6",0);
 		   	      
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2713,7 +2712,7 @@ public class DataPointTest {
 		      expectedMap.put("6.5",1);
 		      expectedMap.put("7.6",0);    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2743,7 +2742,7 @@ public class DataPointTest {
 		      expectedMap.put("6.6",0);
 		      expectedMap.put("7.7",0);    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2773,7 +2772,7 @@ public class DataPointTest {
 		      expectedMap.put("6.6",0);
 		      expectedMap.put("7.7",0);    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2803,7 +2802,7 @@ public class DataPointTest {
 		      expectedMap.put("6.6",0);
 		      expectedMap.put("7.7",0);    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2834,7 +2833,7 @@ public class DataPointTest {
 		      expectedMap.put("6.6",0);
 		      expectedMap.put("7.7",0);    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2864,7 +2863,7 @@ public class DataPointTest {
 		      expectedMap.put("6.6",0);
 		      expectedMap.put("7.7",0);    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2895,7 +2894,7 @@ public class DataPointTest {
 		      expectedMap.put("6.6",1);
 		      expectedMap.put("7.7",0);    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2924,7 +2923,7 @@ public class DataPointTest {
 		      expectedMap.put("4.4",0);
 		    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2953,7 +2952,7 @@ public class DataPointTest {
 		      expectedMap.put("4.4",0);
 		    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -2981,7 +2980,7 @@ public class DataPointTest {
 		      expectedMap.put("4.4",0);
 		    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -3009,7 +3008,7 @@ public class DataPointTest {
 		      expectedMap.put("4.4",1);
 		    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -3041,7 +3040,7 @@ public class DataPointTest {
 		      expectedMap.put("7.7",0); 
 		    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -3073,7 +3072,7 @@ public class DataPointTest {
 		      expectedMap.put("7.7",0); 
 		    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -3104,7 +3103,7 @@ public class DataPointTest {
 		      expectedMap.put("7.7",0); 
 		    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -3136,7 +3135,7 @@ public class DataPointTest {
 		      expectedMap.put("7.7",0); 
 		    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -3168,7 +3167,7 @@ public class DataPointTest {
 		      expectedMap.put("7.7",0); 
 		    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -3200,7 +3199,7 @@ public class DataPointTest {
 		      expectedMap.put("7.7",0); 
 		    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 				
 	  
 			  
@@ -3236,7 +3235,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.3",0);
 		    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 				
 	  
 			  
@@ -3272,7 +3271,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.3",0);
 		  
 		       // assertTrue(valueMap.equals(expectedMap));
-		      Assert.assertEquals(expectedMap,valueMap);	  
+		      assertEquals(expectedMap,valueMap);	  
 				
 	  
 			  
@@ -3308,7 +3307,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.2",0);
 		      expectedMap.put("1.1.3",0);
 		       // assertTrue(valueMap.equals(expectedMap));
-		      Assert.assertEquals(expectedMap,valueMap);	  
+		      assertEquals(expectedMap,valueMap);	  
 				
 	  
 			  
@@ -3339,7 +3338,7 @@ public class DataPointTest {
 		      expectedMap.put("4.4",0);
 		    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -3367,7 +3366,7 @@ public class DataPointTest {
 		      expectedMap.put("4.4",0);
 		    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -3395,7 +3394,7 @@ public class DataPointTest {
 		      expectedMap.put("4.4",0);
 		    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -3423,7 +3422,7 @@ public class DataPointTest {
 		      expectedMap.put("4.4",0);
 		    
 		       // assertTrue(valueMap.equals(expectedMap));
-				Assert.assertEquals(expectedMap,valueMap);	  
+				assertEquals(expectedMap,valueMap);	  
 	  
 			  
 		  }
@@ -3505,7 +3504,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.9",0);
 		      
 		       // assertTrue(valueMap.equals(expectedMap));
-		     Assert.assertEquals(expectedMap,valueMap);
+		     assertEquals(expectedMap,valueMap);
 		  }
 		  
 		  
@@ -3588,7 +3587,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.9",0);
 		      
 		       // assertTrue(valueMap.equals(expectedMap));
-		     Assert.assertEquals(expectedMap,valueMap);
+		     assertEquals(expectedMap,valueMap);
 		  }
 		  @Test
 		  //TypeOfDelivery Spontaneous Vacuumextraction
@@ -3667,7 +3666,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.9",0);
 		      
 		       // assertTrue(valueMap.equals(expectedMap));
-		     Assert.assertEquals(expectedMap,valueMap);
+		     assertEquals(expectedMap,valueMap);
 		  }
 		  
 		  @Test
@@ -3747,7 +3746,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.9",0);
 		      
 		       // assertTrue(valueMap.equals(expectedMap));
-		     Assert.assertEquals(expectedMap,valueMap);
+		     assertEquals(expectedMap,valueMap);
 		  }
 		  
 		  @Test
@@ -3827,7 +3826,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.9",0);
 		      
 		       // assertTrue(valueMap.equals(expectedMap));
-		     Assert.assertEquals(expectedMap,valueMap);
+		     assertEquals(expectedMap,valueMap);
 		  }
 		  @Test
 		  //TypeOfDelivery Induced VBAC
@@ -3906,7 +3905,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.9",0);
 		      
 		       // assertTrue(valueMap.equals(expectedMap));
-		     Assert.assertEquals(expectedMap,valueMap);
+		     assertEquals(expectedMap,valueMap);
 		  }
 		  
 		  @Test
@@ -3965,7 +3964,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.12",0);
 		      expectedMap.put("1.1.13",0);
 		       // assertTrue(valueMap.equals(expectedMap));
-		     Assert.assertEquals(expectedMap,valueMap);
+		     assertEquals(expectedMap,valueMap);
 		  }
 
 		  
@@ -4025,7 +4024,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.12",0);
 		      expectedMap.put("1.1.13",0);
 		       // assertTrue(valueMap.equals(expectedMap));
-		     Assert.assertEquals(expectedMap,valueMap);
+		     assertEquals(expectedMap,valueMap);
 		  }
 		  
 		  
@@ -4082,7 +4081,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.12",0);
 		      expectedMap.put("1.1.13",0);
 		       // assertTrue(valueMap.equals(expectedMap));
-		     Assert.assertEquals(expectedMap,valueMap);
+		     assertEquals(expectedMap,valueMap);
 		  }
 		  @Test
 		  //TypeOfDelivery Induced VBAC
@@ -4137,7 +4136,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.12",0);
 		      expectedMap.put("1.1.13",0);
 		       // assertTrue(valueMap.equals(expectedMap));
-		     Assert.assertEquals(expectedMap,valueMap);
+		     assertEquals(expectedMap,valueMap);
 		  }
 		  @Test
 		  //TypeOfDelivery Induced VBAC
@@ -4193,7 +4192,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.12",0);
 		      expectedMap.put("1.1.13",0);
 		       // assertTrue(valueMap.equals(expectedMap));
-		     Assert.assertEquals(expectedMap,valueMap);
+		     assertEquals(expectedMap,valueMap);
 		  }
 		  
 		  @Test
@@ -4249,7 +4248,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.12",0);
 		      expectedMap.put("1.1.13",0);
 		       // assertTrue(valueMap.equals(expectedMap));
-		     Assert.assertEquals(expectedMap,valueMap);
+		     assertEquals(expectedMap,valueMap);
 		  }
 		  @Test
 		  //TypeOfDelivery Induced VBAC
@@ -4304,7 +4303,7 @@ public class DataPointTest {
 		      expectedMap.put("1.1.12",0);
 		      expectedMap.put("1.1.13",0);
 		       // assertTrue(valueMap.equals(expectedMap));
-		     Assert.assertEquals(expectedMap,valueMap);
+		     assertEquals(expectedMap,valueMap);
 		  }
 		  @Test
 		  //TypeOfDelivery Induced VBAC
@@ -4360,6 +4359,6 @@ public class DataPointTest {
 		      expectedMap.put("1.1.12",0);
 		      expectedMap.put("1.1.13",0);
 		       // assertTrue(valueMap.equals(expectedMap));
-		     Assert.assertEquals(expectedMap,valueMap);
+		     assertEquals(expectedMap,valueMap);
 		  }
 }

@@ -7,8 +7,10 @@ import java.util.List;
 
 import java.util.regex.Pattern;
 
-import com.nv.framework.util.collection.CollectionUtil;
-import com.nv.framework.util.StringUtil;
+import com.nv.platform.base.util.ArrayUtil;
+import com.nv.platform.base.util.StringUtil;
+
+
 
 
 
@@ -38,7 +40,7 @@ public class RegexUtil{
 
     public static List<Pattern> toRegexPatterns(List<String> regexList)
     {
-        if (CollectionUtil.isEmpty(regexList))
+        if (regexList.isEmpty())
         {
             return null;
         }
@@ -61,7 +63,7 @@ public class RegexUtil{
 
     public static boolean match(List<Pattern> regexList, String text)
     {
-        if (CollectionUtil.isEmpty(regexList))
+        if (regexList.isEmpty())
         {
             return false;
         }

@@ -6,11 +6,11 @@
 
 
     
-	<description>ynw</description>
-	<display-name>ynw</display-name>
+	<description>analytics</description>
+	<display-name>analytics</display-name>
 	<context-param>
 		<param-name>webAppRootKey</param-name>
-		<param-value>webapp.ynw</param-value>
+		<param-value>webapp.netmdkb</param-value>
 	</context-param>
 
 	<listener>
@@ -26,85 +26,21 @@
  <context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-		    classpath:META-INF/context.xml
-		    classpath:META-INF/analytics-servlet.xml
-		    classpath:META-INF/appDataSource.xml
-            classpath:META-INF/analytics-context.xml
+		     classpath:META-INF/appDataSource.xml
+		     classpath:META-INF/persistence-context.xml
+             classpath:META-INF/analytics-context.xml
+             classpath:META-INF/analytics-servlet.xml
           </param-value>
 	</context-param>
 
-	<filter>
-		<!-- The CORS filter with parameters -->
-		<filter-name>CORS</filter-name>
-		<filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
-		
-		<!-- Note: All parameters are options, if omitted the CORS 
-		     Filter will fall back to the respective default values.
-		  -->
-		<init-param>
-			<param-name>cors.allowGenericHttpRequests</param-name>
-			<param-value>true</param-value>
-		</init-param>
-		
-		<init-param>
-			<param-name>cors.allowOrigin</param-name>
-			<param-value>*</param-value>
-		</init-param>
-		
-		<init-param>
-			<param-name>cors.allowSubdomains</param-name>
-			<param-value>false</param-value>
-		</init-param>
-		
-		<init-param>
-			<param-name>cors.supportedMethods</param-name>
-			<param-value>GET, HEAD, POST, OPTIONS, PUT, DELETE, PATCH</param-value>
-		</init-param>
-		
-		<init-param>
-			<param-name>cors.supportedHeaders</param-name>
-			<param-value>*</param-value>
-		</init-param>
-		
-		<init-param>
-			<param-name>cors.exposedHeaders</param-name>
-			<param-value>X-Test-1, X-Test-2</param-value>
-		</init-param>
-		
-		<init-param>
-			<param-name>cors.supportsCredentials</param-name>
-			<param-value>true</param-value>
-		</init-param>
-		
-		<init-param>
-			<param-name>cors.maxAge</param-name>
-			<param-value>3600</param-value>
-		</init-param>
 
-	</filter>
-
-	<filter-mapping>
-		<!-- CORS Filter mapping -->
-		<filter-name>CORS</filter-name>
-		<url-pattern>/v1/*</url-pattern>
-	</filter-mapping>
-	
-    <filter>
-		<filter-name>RequestDumpFilter</filter-name>
-		<filter-class>com.nv.ynw.configurations.RequestDumpFilter</filter-class>
-	</filter>
-	 
-	<filter-mapping>
-		<filter-name>RequestDumpFilter</filter-name>
-		<url-pattern>/v1/*</url-pattern>
-	</filter-mapping>	
-	
+	          
 	<servlet>
-		<servlet-name>ynw</servlet-name>
+		<servlet-name>analytics</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>META-INF/ynw-servlet.xml</param-value>
+			<param-value>META-INF/analytics-servlet.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 		<multipart-config>
@@ -117,7 +53,7 @@
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>ynw</servlet-name>
+		<servlet-name>analytics</servlet-name>
 		<url-pattern>/v1/*</url-pattern>
 	</servlet-mapping>
 
