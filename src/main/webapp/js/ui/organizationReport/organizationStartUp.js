@@ -38,12 +38,21 @@ organizationStartup.prototype.init = function() {
 	
 }
 
-organizationStartup.prototype.getParametersForGraph = function() {
+/*organizationStartup.prototype.getParametersForGraph = function() {
     var cdt = new Date();  
 	var month = cdt.getMonth();  
 	current_month =month+1;
 	current_year =cdt.getFullYear(); 
 	var  parameters='{"startMonth":"1","startYear":"'+current_year+'","endYear":"'+current_year+'","endMonth":"'+current_month+'","datapoints":"12"}';
+    return parameters;
+	}*/
+	
+	organizationStartup.prototype.getParametersForGraph = function() {
+    var cdt = new Date();  
+	var month = cdt.getMonth();  
+	current_month =month+1;
+	current_year =cdt.getFullYear(); 
+	var  parameters='{"startMonth":"1","startYear":"'+2013+'","endYear":"'+current_year+'","endMonth":"'+current_month+'","datapoints":"12"}';
     return parameters;
 	}
 
@@ -235,7 +244,7 @@ organizationStartup.prototype.setGraphCoordinates=function(graphCoordinates) {
 			.set('ymin', 0)
 			 .set('hmargin', 30)
 			.set('ymax',ymaxValue)
-			.set('title'," No of Caesareans--2014")
+			.set('title'," No of Caesareans - 2017")
 			.set('title.color',"Green")
 			.set('title.font',"Times New Roman,Georgia,Serif")
 			.set('title.yaxis',"No of Patients")
