@@ -53,20 +53,20 @@ public class ClusterXmlParser implements Parser<Cluster> {
 
 		
 		} catch (IllegalArgumentException e) {
-			System.out.println("xmlpath"+ xmlpath);
+			//System.out.println("xmlpath"+ xmlpath);
 			throw new ServiceException(ErrorCodeEnum.INVALIDDATA);
 
 		} catch (ParserConfigurationException e) {
-			System.out.println("xmlpath"+ xmlpath);
+			//System.out.println("xmlpath"+ xmlpath);
 			throw new ServiceException(ErrorCodeEnum.INVALIDDATA);
 
 		} catch (SAXException e) {
 
-			System.out.println("SAXException : xml not well formed");
+			//System.out.println("SAXException : xml not well formed");
 			throw new ServiceException(ErrorCodeEnum.INVALIDDATA);
 
 		} catch (IOException e) {
-			System.out.println("IO error");
+			//System.out.println("IO error");
 			throw new ServiceException(ErrorCodeEnum.INVALIDDATA);
 
 		} 

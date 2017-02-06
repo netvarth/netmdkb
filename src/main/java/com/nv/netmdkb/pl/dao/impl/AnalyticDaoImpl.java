@@ -156,7 +156,7 @@ public class AnalyticDaoImpl  extends GenericDaoHibernateImpl  implements Analyt
 			List<Cluster> clusters= parser.parse(xmlPath);
 			dataPoint.setClusters(clusters);
 			dataPoints.add(dataPoint);
-			System.out.println(dpTbl.getName());
+			//System.out.println(dpTbl.getName());
 		}
 
 		return dataPoints;
@@ -175,7 +175,7 @@ public class AnalyticDaoImpl  extends GenericDaoHibernateImpl  implements Analyt
 		String xmlPath =dpTbl.getClusterXml();
 		List<Cluster> clusters= parser.parse(xmlPath);
 		dataPoint.setClusters(clusters);
-		System.out.println(dpTbl.getName());
+		//System.out.println(dpTbl.getName());
 
 
 		return dataPoint;

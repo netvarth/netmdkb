@@ -24,7 +24,7 @@ public class ClusterParserTest {
 
 		@Test
 		public void robsonClassTest() {
-			System.out.println("iniside questionnaireTest");
+			//System.out.println("iniside questionnaireTest");
 						Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 					    List<Cluster> clusters=	parser.parse("RobsonClass.xml");
 					
@@ -35,7 +35,7 @@ public class ClusterParserTest {
 
 		@Test
 		public void apgarScoreTest() {
-			System.out.println("iniside apgar");
+			//System.out.println("iniside apgar");
 						Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 					    List<Cluster> clusters=	parser.parse("ApgarScore.xml");
 					
@@ -49,7 +49,7 @@ public class ClusterParserTest {
 
 	@Test
 		public void babyGenderAndWeightTest() {
-			System.out.println("iniside baby");
+			//System.out.println("iniside baby");
 						Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 					    List<Cluster> clusters=	parser.parse("BirthWeight.xml");
 					
@@ -60,7 +60,7 @@ public class ClusterParserTest {
 	
 	@Test
 	public void bloodGroup() {
-		System.out.println("iniside bloodGroup");
+		//System.out.println("iniside bloodGroup");
 					Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 				    List<Cluster> clusters=	parser.parse("BloodGroup.xml");
 				
@@ -70,7 +70,7 @@ public class ClusterParserTest {
 	}
 	@Test
 	public void bloodLoss() {
-		System.out.println("iniside bloodLoss");
+		//System.out.println("iniside bloodLoss");
 					Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 				    List<Cluster> clusters=	parser.parse("BloodLoss.xml");
 				
@@ -80,7 +80,7 @@ public class ClusterParserTest {
 	}
 	@Test
 	public void caesareanSection() {
-		System.out.println("iniside caesareanSection");
+		//System.out.println("iniside caesareanSection");
 					Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 				    List<Cluster> clusters=	parser.parse("Caesarean.xml");
 				    
@@ -90,7 +90,7 @@ public class ClusterParserTest {
 	}
 	@Test
 	public void episiotomy() {
-		System.out.println("iniside Episiotomy");
+		//System.out.println("iniside Episiotomy");
 					Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 				    List<Cluster> clusters=	parser.parse("Episiotomy.xml");
 				    
@@ -101,7 +101,7 @@ public class ClusterParserTest {
 	
 	@Test
 	public void fetalComplications() {
-		System.out.println("iniside FetalComplications");
+		//System.out.println("iniside FetalComplications");
 					Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 				    List<Cluster> clusters=	parser.parse("FetalComplications.xml");
 				    
@@ -111,7 +111,7 @@ public class ClusterParserTest {
 	}
 	@Test
 	public void fourthStageDuration() {
-		System.out.println("iniside FourthStageDuration");
+		//System.out.println("iniside FourthStageDuration");
 					Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 				    List<Cluster> clusters=	parser.parse("FourthStageDuration.xml");
 				    
@@ -121,7 +121,7 @@ public class ClusterParserTest {
 	}
 	@Test
 	public void parity() {
-		System.out.println("iniside Parity");
+		//System.out.println("iniside Parity");
 					Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 				    List<Cluster> clusters=	parser.parse("Parity.xml");
 				    
@@ -131,7 +131,7 @@ public class ClusterParserTest {
 	}
 	@Test
 	public void perinealTear() {
-		System.out.println("iniside PerinealTear");
+		//System.out.println("iniside PerinealTear");
 					Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 				    List<Cluster> clusters=	parser.parse("PerinealTear.xml");
 				    
@@ -141,7 +141,7 @@ public class ClusterParserTest {
 	}
 	@Test
 	public void placentalWeight() {
-		System.out.println("iniside PlacentalWt");
+		//System.out.println("iniside PlacentalWt");
 					Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 				    List<Cluster> clusters=	parser.parse("PlacentalWeight.xml");
 				    
@@ -151,7 +151,7 @@ public class ClusterParserTest {
 	}
 	@Test
 	public void presentation() {
-		System.out.println("iniside Presentation");
+		//System.out.println("iniside Presentation");
 					Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 				    List<Cluster> clusters=	parser.parse("Presentation.xml");
 				    
@@ -161,7 +161,7 @@ public class ClusterParserTest {
 	}
 	@Test
 	public void previousCS() {
-		System.out.println("iniside PreviousCS");
+		//System.out.println("iniside PreviousCS");
 					Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 				    List<Cluster> clusters=	parser.parse("PreviousCS.xml");
 				    
@@ -171,7 +171,7 @@ public class ClusterParserTest {
 	}
 	@Test
 	public void bodyMassIndex() {
-	System.out.println("iniside bodyMassIndex");
+	//System.out.println("iniside bodyMassIndex");
 				Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 			    List<Cluster> clusters=	parser.parse("BookedStatistics.xml");
 			
@@ -182,7 +182,7 @@ public class ClusterParserTest {
 
 @Test
 public void bookedStatistics() {
-System.out.println("iniside bookedStatistics");
+//System.out.println("iniside bookedStatistics");
 			Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 		    List<Cluster> clusters=	parser.parse("BodyMassIndex.xml");
 		
@@ -192,7 +192,7 @@ System.out.println("iniside bookedStatistics");
 }
 @Test
 public void intravenusFluid() {
-System.out.println("iniside intravenusFluid");
+//System.out.println("iniside intravenusFluid");
 			Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 		    List<Cluster> clusters=	parser.parse("IntraVenusFluid.xml");
 		
@@ -202,7 +202,7 @@ System.out.println("iniside intravenusFluid");
 }
 @Test
 public void maternalAge() {
-System.out.println("iniside maternal");
+//System.out.println("iniside maternal");
 			Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 		    List<Cluster> clusters=	parser.parse("MaternalAge.xml");
 		
@@ -212,7 +212,7 @@ System.out.println("iniside maternal");
 }
 @Test
 public void maternalComplications() {
-System.out.println("iniside maternal complications");
+//System.out.println("iniside maternal complications");
 			Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 		    List<Cluster> clusters=	parser.parse("MaternalComplications.xml");
 		
@@ -222,7 +222,7 @@ System.out.println("iniside maternal complications");
 }
 @Test
 public void maternalHeight() {
-System.out.println("iniside maternal height");
+//System.out.println("iniside maternal height");
 			Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 		    List<Cluster> clusters=	parser.parse("MaternalHeight.xml");
 		
@@ -234,7 +234,7 @@ System.out.println("iniside maternal height");
 
 @Test
 public void maternalMortalityMorbidility() {
-System.out.println("iniside maternal mortality and morbidity");
+//System.out.println("iniside maternal mortality and morbidity");
 			Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 		    List<Cluster> clusters=	parser.parse("MaternalMortalityMorbidity.xml");
 		
@@ -245,7 +245,7 @@ System.out.println("iniside maternal mortality and morbidity");
 
 @Test
 public void maternalWeight() {
-System.out.println("iniside maternal weight");
+//System.out.println("iniside maternal weight");
 			Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 		    List<Cluster> clusters=	parser.parse("MaternalWeight.xml");
 		
@@ -255,7 +255,7 @@ System.out.println("iniside maternal weight");
 }
 @Test
 public void thirdStageDuration() {
-System.out.println("iniside third Stage Duration");
+//System.out.println("iniside third Stage Duration");
 			Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 		    List<Cluster> clusters=	parser.parse("ThirdStageDuration.xml");
 		
@@ -265,7 +265,7 @@ System.out.println("iniside third Stage Duration");
 }
 @Test
 public void vaginalDelivery() {
-System.out.println("vaginal delivery");
+//System.out.println("vaginal delivery");
 			Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 		    List<Cluster> clusters=	parser.parse("VaginalDelivery.xml");
 		
@@ -275,7 +275,7 @@ System.out.println("vaginal delivery");
 }
 @Test
 public void oxytoxic() {
-System.out.println("oxytoxic");
+//System.out.println("oxytoxic");
 			Parser<Cluster> parser = (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 		    List<Cluster> clusters=	parser.parse("Oxytoxin.xml");
 		
@@ -286,7 +286,7 @@ System.out.println("oxytoxic");
 
 @Test
 public void induction() {
-System.out.println("induction");
+//System.out.println("induction");
 			Parser<Cluster> parser =  (Parser<Cluster>) applicationContext.getBean("cluster.parser");     
 		    List<Cluster> clusters=	parser.parse("Induction.xml");
 		   for(Cluster cluster:clusters){

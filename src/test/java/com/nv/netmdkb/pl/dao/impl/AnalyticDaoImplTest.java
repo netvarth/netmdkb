@@ -31,12 +31,12 @@ public class AnalyticDaoImplTest {
 		
 		@Test
 		public void getDataPoints() {
-			System.out.println("iniside questionnaireTest");
+			//System.out.println("iniside questionnaireTest");
 			AnalyticDao analyticDao = (AnalyticDao) applicationContext.getBean("analytic.dao");     
 			String questionnaire="Survey1";
 			List<DataPoint> response = analyticDao.getDataPoints(questionnaire);
-			System.out.println("finished");
-			System.out.println("executed");
+			//System.out.println("finished");
+			//System.out.println("executed");
 		}
 		
 		

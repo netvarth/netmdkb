@@ -25,7 +25,7 @@ public List<Inference> getInferences(String fmonth, String fyear, String toMonth
 	 Inference inference ;
 	 for (InformationExplorer explorer:datapointlist){
 	     inference = explorer.getInference(fmonth, fyear, toMonth, toYear);
-	     System.out.println(inference.getDataPoint());
+	     //System.out.println(inference.getDataPoint());
 	     inferences.add(inference);
 	 }
 	 
@@ -166,7 +166,7 @@ public List<Inference> getInferencesForGraph(String fMonth, String fYear,
 	 Inference inference ;
 	 for (InformationExplorer explorer:datapointlist){
 	     inference = explorer.getInferenceForGraphCoordinates(fMonth, fYear, toMonth, toYear);
-	     System.out.println(inference);
+	     //System.out.println(inference);
 	     inferences.add(inference);
 	 }
 	 

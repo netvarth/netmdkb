@@ -116,7 +116,7 @@ public class Cluster{
 		for(Cluster cluster:subClusters){
 			rowColum[0][i]=cluster.name;
 			rowColum[1][i++]=prefix+"."+cluster.id;
-			System.out.println(prefix+"."+cluster.id);
+			//System.out.println(prefix+"."+cluster.id);
 		}
 		return rowColum; 
 	}
@@ -128,30 +128,30 @@ public class Cluster{
 
 
 	public void traverse(){
-		System.out.println("id: "+this.getId());
-		System.out.println("name: "+this.getName());
+		//System.out.println("id: "+this.getId());
+		//System.out.println("name: "+this.getName());
 		Rule rule =this.getRule();
 		while (rule!=null){
-			System.out.println("Rule:");	
-			System.out.print(rule.getExpression().getQuestion().getKey());
-			System.out.print(" "+rule.getPredicate().name());
-			System.out.print(" "+rule.getExpression().getEdge());
-			System.out.println(" "+rule.getConj().name());
+			//System.out.println("Rule:");	
+			//System.out.print(rule.getExpression().getQuestion().getKey());
+			//System.out.print(" "+rule.getPredicate().name());
+			//System.out.print(" "+rule.getExpression().getEdge());
+			//System.out.println(" "+rule.getConj().name());
 			rule=rule.getRule();
 		}
 
 		if(this.getSubClusters().size()>0){
 			for(Cluster subcluster:this.getSubClusters()){
-				System.out.println("SubCluster: ");
-				System.out.println("id: "+subcluster.getId());
-				System.out.println("name: "+subcluster.getName());
+				//System.out.println("SubCluster: ");
+				//System.out.println("id: "+subcluster.getId());
+				//System.out.println("name: "+subcluster.getName());
 				Rule subRule =subcluster.getRule();
 				while (subRule!=null){
-					System.out.println("Rule: ");	
-					System.out.print(subRule.getExpression().getQuestion().getKey());
-					System.out.print(" "+subRule.getPredicate().name());
-					System.out.print(" "+subRule.getExpression().getEdge());
-					System.out.println(" "+subRule.getConj().name());
+					//System.out.println("Rule: ");	
+					//System.out.print(subRule.getExpression().getQuestion().getKey());
+					//System.out.print(" "+subRule.getPredicate().name());
+					//System.out.print(" "+subRule.getExpression().getEdge());
+					//System.out.println(" "+subRule.getConj().name());
 					subRule=subRule.getRule();
 				}
 

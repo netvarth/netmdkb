@@ -142,7 +142,7 @@ public  class InformationListener   implements InformationExplorer , Information
 					columnName=rowColumn[0][i];
 					columnId=rowColumn[1][i];
 					value =map.get(columnId);
-					System.out.println("value"+value);
+					//System.out.println("value"+value);
 					measure = new Measure();
 					measure.setRow(rowName);
 					measure.setRowId(rowTypeOrder);

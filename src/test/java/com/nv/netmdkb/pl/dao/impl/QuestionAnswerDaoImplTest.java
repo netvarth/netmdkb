@@ -24,19 +24,19 @@ public class QuestionAnswerDaoImplTest {
 
 	@Test
 	public void questionnaireTest() {
-		System.out.println("iniside questionnaireTest");
+		//System.out.println("iniside questionnaireTest");
 					QuestionAnswerDao qaDao = (QuestionAnswerDao) applicationContext.getBean("qa.dao");     
 					  //List<MaternalAgeEntity> entityList =analaticDao.getMaternalAgeInferences(2013, 1, 2014, 12);
 					  String questionnaireId="Survey1";
 					  Questionnaire questionnaire =qaDao.getQuestionnaire(questionnaireId);	
 					  
-					  System.out.println(questionnaire.getUid());
+					 // System.out.println(questionnaire.getUid());
 					  
 					  for( Question question:questionnaire.getQuestions()){
-						  System.out.println(question.getKey());
+						 // System.out.println(question.getKey());
 					 }
 					  
-					  System.out.println("Robsonclass test :"+questionnaire.getQuestion("robsonclass").getKey() );
+					 // System.out.println("Robsonclass test :"+questionnaire.getQuestion("robsonclass").getKey() );
 	}
 
 

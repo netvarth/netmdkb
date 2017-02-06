@@ -111,7 +111,7 @@ public class AnalyserCore  implements Analyser, Runnable {
 		 
 		 if (auAnswerSet.isAuthenticated()){
 		  queue.put(auAnswerSet);
-		  System.out.println(queue.size());
+		  //System.out.println(queue.size());
 		 }
 		 else{
 		    throw new ServiceException(ErrorCodeEnum.INVALIDDATA);	 

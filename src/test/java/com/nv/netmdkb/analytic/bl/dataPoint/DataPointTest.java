@@ -130,7 +130,7 @@ public class DataPointTest {
 		  map.put(new QuestionIdentifier(question1.getId()),"1");
 		  map.put(new QuestionIdentifier(question2.getId()),"5");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		 // //System.out.println(valueMap);
 		  HashMap<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 		  expectedMap.put("2.2.2",0);
@@ -168,7 +168,7 @@ public class DataPointTest {
 		  question2.setQuestion("question2");
 		  map.put(new QuestionIdentifier(question2.getId()),"1499");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		 // //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",1);
 	      expectedMap.put("5.5.3",0);
@@ -224,7 +224,7 @@ public class DataPointTest {
 		  map.put(new QuestionIdentifier(question2.getId()),"2499");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
 		  Map<String, Integer> expectedMap = new HashMap<>();
-	  	   System.out.println(valueMap);   
+	  	   //System.out.println(valueMap);   
 		  expectedMap.put("1.1.1",0);
 		  expectedMap.put("1.1.4",0);
 	      expectedMap.put("5.5.3",0);
@@ -278,7 +278,7 @@ public class DataPointTest {
 		  question2.setQuestion("question2");
 		  map.put(new QuestionIdentifier(question2.getId()),"2500");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 		  expectedMap.put("1.1.4",0);
@@ -332,7 +332,7 @@ public class DataPointTest {
 		  question2.setQuestion("question2");
 		  map.put(new QuestionIdentifier(question2.getId()),"3550");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);    
+		  //System.out.println(valueMap);    
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 		  expectedMap.put("1.1.4",0);
@@ -383,7 +383,7 @@ public class DataPointTest {
 		  question2.setQuestion("question2");
 		  map.put(new QuestionIdentifier(question2.getId()),"unknown");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 		  expectedMap.put("1.1.4",0);
@@ -484,7 +484,7 @@ public class DataPointTest {
 		  question2.setQuestion("question2");
 		  map.put(new QuestionIdentifier(question2.getId()),"+ve");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 	      expectedMap.put("5.5.3",0);
@@ -531,7 +531,7 @@ public class DataPointTest {
 		  question2.setQuestion("question2");
 		  map.put(new QuestionIdentifier(question2.getId()),"Unknown");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 	      expectedMap.put("5.5.3",0);
@@ -579,7 +579,7 @@ public class DataPointTest {
 		  question2.setQuestion("question2");
 		  map.put(new QuestionIdentifier(question2.getId()),"+ve");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 	      expectedMap.put("5.5.3",0);
@@ -627,7 +627,7 @@ public class DataPointTest {
 		  question2.setQuestion("question2");
 		  map.put(new QuestionIdentifier(question2.getId()),"Unknown");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 	      expectedMap.put("5.5.3",1);
@@ -673,7 +673,7 @@ public class DataPointTest {
 		  question2.setQuestion("question2");
 		  map.put(new QuestionIdentifier(question2.getId()),"CS");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 	      expectedMap.put("2.2.3",0);
@@ -721,7 +721,7 @@ public class DataPointTest {
 		  question2.setQuestion("question2");
 		  map.put(new QuestionIdentifier(question2.getId()),"Vaginal");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 	      expectedMap.put("2.2.3",0);
@@ -765,7 +765,7 @@ public class DataPointTest {
 		  question2.setQuestion("question2");
 		  map.put(new QuestionIdentifier(question2.getId()),"Vaginal");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 	      expectedMap.put("2.2.3",0);
@@ -809,7 +809,7 @@ public class DataPointTest {
 		  question2.setQuestion("question2");
 		  map.put(new QuestionIdentifier(question2.getId()),"Vaginal");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 	      expectedMap.put("2.2.3",0);
@@ -846,7 +846,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"18");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("7.5",0);
 		  expectedMap.put("6.6",0);
@@ -879,7 +879,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"23");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("7.5",0);
 		  expectedMap.put("6.6",0);
@@ -911,7 +911,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"28");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("7.5",0);
 		  expectedMap.put("6.6",0);
@@ -943,7 +943,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"30");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("7.5",0);
 		  expectedMap.put("6.6",0);
@@ -975,7 +975,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"Unknown");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("7.5",1);
 		  expectedMap.put("6.6",0);
@@ -1007,7 +1007,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"booked");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 	     /* expectedMap.put("4.4",0);*/
 	      expectedMap.put("3.3",0);
@@ -1038,7 +1038,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"unbooked");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 	   /*   expectedMap.put("4.4",0);*/
 	      expectedMap.put("3.3",0);
@@ -1067,7 +1067,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"Referred");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 	   /*   expectedMap.put("4.4",0);*/
 	      expectedMap.put("3.3",1);
@@ -1095,7 +1095,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"Unknown");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 	    /*  expectedMap.put("4.4",1);*/
 	      expectedMap.put("3.3",0);
@@ -1127,7 +1127,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"Midline Episiotomy");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("4.4",0);
 	      expectedMap.put("3.3",0);
@@ -1155,7 +1155,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"Medio-Lateral Episiotomy");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("4.4",0);
 	      expectedMap.put("3.3",0);
@@ -1182,7 +1182,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"Unknown");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("4.4",1);
 	      expectedMap.put("3.3",0);
@@ -1210,7 +1210,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"yes");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",1);
 	      expectedMap.put("2.2.2",0);
@@ -1241,7 +1241,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"Unknown");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 	      expectedMap.put("2.2.2",1);
@@ -1272,7 +1272,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"Yes");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 	      expectedMap.put("2.2.2",0);
@@ -1288,89 +1288,89 @@ public class DataPointTest {
 		  
 	  }
 	  
-	  @Test
-	  //Gestation between 20 and 27
-	  //expected result{4.4=0,3.3=0, 2.2=0, 1.1=1}
-      public void gestation1(){ 
-		  AnalyticDao analyticDao = (AnalyticDao) applicationContext.getBean("analytic.dao");
-		  String datapoint="Gestation";
-          DataPoint dp=analyticDao.getDataPoint(datapoint);
-		  Map<QuestionIdentifier, String> map= new HashMap<QuestionIdentifier, String>();
-		  Question question1 = new Question();
-		  question1.setId(29);
-		  question1.setKey("gestationWeek");
-		  question1.setAnswerValueType(ValueType.INTEGER);
-		  question1.setQuestion("question1");
-		  question1.setMandatory(false);
-		  map.put(new QuestionIdentifier(question1.getId()),"22");
-		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
-		  Map<String, Integer> expectedMap = new HashMap<>();
-		    expectedMap.put("4.4",0);
-		    expectedMap.put("3.3",0);
-		    expectedMap.put("2.2",0);
-		    expectedMap.put("1.1",1);
-	   	      
-			assertEquals(expectedMap,valueMap);	 
-  
-		  
-	  }
-	  
-	  @Test
-	  //Gestation in between 28 and 36
-	  //expected result{4.4=0,3.3=0, 2.2=1, 1.1=0}
-      public void gestation2(){ 
-		  AnalyticDao analyticDao = (AnalyticDao) applicationContext.getBean("analytic.dao");
-		  String datapoint="Gestation";
-          DataPoint dp=analyticDao.getDataPoint(datapoint);
-		  Map<QuestionIdentifier, String> map= new HashMap<QuestionIdentifier, String>();
-		  Question question1 = new Question();
-		  question1.setId(29);
-		  question1.setKey("gestationWeek");
-		  question1.setAnswerValueType(ValueType.INTEGER);
-		  question1.setQuestion("question1");
-		  question1.setMandatory(false);
-		  map.put(new QuestionIdentifier(question1.getId()),"36");
-		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
-		  Map<String, Integer> expectedMap = new HashMap<>();
-		    expectedMap.put("4.4",0);
-		    expectedMap.put("3.3",0);
-		    expectedMap.put("2.2",1);
-		    expectedMap.put("1.1",0);
-	   	      
-			assertEquals(expectedMap,valueMap);	 
-  
-		  
-	  }
-	  
-	  @Test
-	  //Gestation >=37
-	  //expected result{4.4=0,3.3=1, 2.2=0, 1.1=0}
-      public void gestation3(){ 
-		  AnalyticDao analyticDao = (AnalyticDao) applicationContext.getBean("analytic.dao");
-		  String datapoint="Gestation";
-          DataPoint dp=analyticDao.getDataPoint(datapoint);
-		  Map<QuestionIdentifier, String> map= new HashMap<QuestionIdentifier, String>();
-		  Question question1 = new Question();
-		  question1.setId(29);
-		  question1.setKey("gestationWeek");
-		  question1.setAnswerValueType(ValueType.INTEGER);
-		  question1.setQuestion("question1");
-		  question1.setMandatory(false);
-		  map.put(new QuestionIdentifier(question1.getId()),"38");
-		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
-		  Map<String, Integer> expectedMap = new HashMap<>();
-		    expectedMap.put("4.4",0);
-		    expectedMap.put("3.3",1);
-		    expectedMap.put("2.2",0);
-		    expectedMap.put("1.1",0);
-	   	      
-			assertEquals(expectedMap,valueMap);	 
-  
-		  
-	  }
+//	  @Test
+//	  //Gestation between 20 and 27
+//	  //expected result{4.4=0,3.3=0, 2.2=0, 1.1=1}
+//      public void gestation1(){ 
+//		  AnalyticDao analyticDao = (AnalyticDao) applicationContext.getBean("analytic.dao");
+//		  String datapoint="Gestation";
+//          DataPoint dp=analyticDao.getDataPoint(datapoint);
+//		  Map<QuestionIdentifier, String> map= new HashMap<QuestionIdentifier, String>();
+//		  Question question1 = new Question();
+//		  question1.setId(29);
+//		  question1.setKey("gestationWeek");
+//		  question1.setAnswerValueType(ValueType.INTEGER);
+//		  question1.setQuestion("question1");
+//		  question1.setMandatory(false);
+//		  map.put(new QuestionIdentifier(question1.getId()),"22");
+//		  Map<String,Integer> valueMap = dp.getValueMap(map);
+//		  //System.out.println(valueMap);
+//		  Map<String, Integer> expectedMap = new HashMap<>();
+//		    expectedMap.put("4.4",0);
+//		    expectedMap.put("3.3",0);
+//		    expectedMap.put("2.2",0);
+//		    expectedMap.put("1.1",1);
+//	   	      
+//			assertEquals(expectedMap,valueMap);	 
+//  
+//		  
+//	  }
+//	  
+//	  @Test
+//	  //Gestation in between 28 and 36
+//	  //expected result{4.4=0,3.3=0, 2.2=1, 1.1=0}
+//      public void gestation2(){ 
+//		  AnalyticDao analyticDao = (AnalyticDao) applicationContext.getBean("analytic.dao");
+//		  String datapoint="Gestation";
+//          DataPoint dp=analyticDao.getDataPoint(datapoint);
+//		  Map<QuestionIdentifier, String> map= new HashMap<QuestionIdentifier, String>();
+//		  Question question1 = new Question();
+//		  question1.setId(29);
+//		  question1.setKey("gestationWeek");
+//		  question1.setAnswerValueType(ValueType.INTEGER);
+//		  question1.setQuestion("question1");
+//		  question1.setMandatory(false);
+//		  map.put(new QuestionIdentifier(question1.getId()),"36");
+//		  Map<String,Integer> valueMap = dp.getValueMap(map);
+//		  //System.out.println(valueMap);
+//		  Map<String, Integer> expectedMap = new HashMap<>();
+//		    expectedMap.put("4.4",0);
+//		    expectedMap.put("3.3",0);
+//		    expectedMap.put("2.2",1);
+//		    expectedMap.put("1.1",0);
+//	   	      
+//			assertEquals(expectedMap,valueMap);	 
+//  
+//		  
+//	  }
+//	  
+//	  @Test
+//	  //Gestation >=37
+//	  //expected result{4.4=0,3.3=1, 2.2=0, 1.1=0}
+//      public void gestation3(){ 
+//		  AnalyticDao analyticDao = (AnalyticDao) applicationContext.getBean("analytic.dao");
+//		  String datapoint="Gestation";
+//          DataPoint dp=analyticDao.getDataPoint(datapoint);
+//		  Map<QuestionIdentifier, String> map= new HashMap<QuestionIdentifier, String>();
+//		  Question question1 = new Question();
+//		  question1.setId(29);
+//		  question1.setKey("gestationWeek");
+//		  question1.setAnswerValueType(ValueType.INTEGER);
+//		  question1.setQuestion("question1");
+//		  question1.setMandatory(false);
+//		  map.put(new QuestionIdentifier(question1.getId()),"38");
+//		  Map<String,Integer> valueMap = dp.getValueMap(map);
+//		  //System.out.println(valueMap);
+//		  Map<String, Integer> expectedMap = new HashMap<>();
+//		    expectedMap.put("4.4",0);
+//		    expectedMap.put("3.3",1);
+//		    expectedMap.put("2.2",0);
+//		    expectedMap.put("1.1",0);
+//	   	      
+//			assertEquals(expectedMap,valueMap);	 
+//  
+//		  
+//	  }
 	  
 	  
 	  
@@ -1405,7 +1405,7 @@ public class DataPointTest {
 		  map.put(new QuestionIdentifier(question2.getId()),"12");
 		  map.put(new QuestionIdentifier(question3.getId()),"Vaginal");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  HashMap<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 		 /* expectedMap.put("2.2.4",0);*/
@@ -1456,7 +1456,7 @@ public class DataPointTest {
 		  map.put(new QuestionIdentifier(question2.getId()),"25");
 		  map.put(new QuestionIdentifier(question3.getId()),"Vaginal");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  HashMap<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 		 /* expectedMap.put("2.2.4",0);*/
@@ -1506,7 +1506,7 @@ public class DataPointTest {
 		  map.put(new QuestionIdentifier(question2.getId()),"25");
 		  map.put(new QuestionIdentifier(question3.getId()),"CS");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  HashMap<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 		/*  expectedMap.put("2.2.4",0);*/
@@ -1555,7 +1555,7 @@ public class DataPointTest {
 		  map.put(new QuestionIdentifier(question2.getId()),"25");
 		  map.put(new QuestionIdentifier(question3.getId()),"Vaginal");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  HashMap<String, Integer> expectedMap = new HashMap<>();
 		  expectedMap.put("1.1.1",0);
 		/*  expectedMap.put("2.2.4",0);*/
@@ -1593,7 +1593,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"856");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		    expectedMap.put("4.4",0);
 		    expectedMap.put("3.3",0);
@@ -1622,7 +1622,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"2000");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		    expectedMap.put("4.4",0);
 		    expectedMap.put("3.3",0);
@@ -1652,7 +1652,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"3001");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		    expectedMap.put("4.4",0);
 		    expectedMap.put("3.3",1);
@@ -1681,7 +1681,7 @@ public class DataPointTest {
 		  question1.setMandatory(false);
 		  map.put(new QuestionIdentifier(question1.getId()),"unknown");
 		  Map<String,Integer> valueMap = dp.getValueMap(map);
-		  System.out.println(valueMap);
+		  //System.out.println(valueMap);
 		  Map<String, Integer> expectedMap = new HashMap<>();
 		    expectedMap.put("4.4",1);
 		    expectedMap.put("3.3",0);
@@ -1830,7 +1830,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"yes");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("1.1.1",1);
 		      expectedMap.put("2.2.3",0);
@@ -1877,7 +1877,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"no");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("1.1.1",0);
 		      expectedMap.put("2.2.3",0);
@@ -1921,7 +1921,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"yes");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("1.1.1",0);
 		      expectedMap.put("2.2.3",0);
@@ -1964,7 +1964,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"unknown");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("1.1.1",0);
 		      expectedMap.put("2.2.3",0);
@@ -2003,7 +2003,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"1.44");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("5.5",0);
 		      expectedMap.put("4.4",0);
@@ -2034,7 +2034,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"1.48");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			 // //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("5.5",0);
 		      expectedMap.put("4.4",0);
@@ -2064,7 +2064,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"1.50");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("5.5",0);
 		      expectedMap.put("4.4",0);
@@ -2094,7 +2094,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"1.71");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("5.5",0);
 		      expectedMap.put("4.4",1);
@@ -2125,7 +2125,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"unknown");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("5.5",1);
 		      expectedMap.put("4.4",0);
@@ -2155,7 +2155,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"39");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("6.6",0);
 			  expectedMap.put("5.5",0);
@@ -2185,7 +2185,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"49");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("6.6",0);
 			  expectedMap.put("5.5",0);
@@ -2217,7 +2217,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"55");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("6.6",0);
 			  expectedMap.put("5.5",0);
@@ -2247,7 +2247,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"70");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("6.6",0);
 			  expectedMap.put("5.5",0);
@@ -2277,7 +2277,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"90");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("6.6",0);
 			  expectedMap.put("5.5",1);
@@ -2307,7 +2307,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"unknown");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("6.6",1);
 			  expectedMap.put("5.5",0);
@@ -2337,7 +2337,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"yes");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 		      expectedMap.put("2.2.1",0);
 		      expectedMap.put("1.1.2",0);
@@ -2367,7 +2367,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"yes");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 		      expectedMap.put("2.2.1",1);
 		      expectedMap.put("1.1.2",0);
@@ -2397,7 +2397,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"CS");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			/*  expectedMap.put("3.3",0);*/
 		      expectedMap.put("2.2",0);
@@ -2426,7 +2426,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"Vaginal");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			/*  expectedMap.put("3.3",0);*/
 		      expectedMap.put("2.2",0);
@@ -2454,7 +2454,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"IV");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",0);
@@ -2483,7 +2483,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"Intra");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",0);
@@ -2512,7 +2512,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"Rectal");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",0);
@@ -2541,7 +2541,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"Rectal");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",0);
@@ -2571,7 +2571,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"1");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  /*expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",0);
@@ -2610,7 +2610,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"2");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.2",1);
 		      expectedMap.put("2.1",0);
@@ -2640,7 +2640,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"3");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.2",0);
 		      expectedMap.put("2.1",0);
@@ -2670,7 +2670,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"4");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.2",0);
 		      expectedMap.put("2.1",0);
@@ -2702,7 +2702,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"7");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.2",0);
 		      expectedMap.put("2.1",0);
@@ -2732,7 +2732,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"1");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",0);
@@ -2762,7 +2762,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"2");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",1);
@@ -2792,7 +2792,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"3a");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",1);
 		      expectedMap.put("2.2",0);
@@ -2823,7 +2823,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"3b");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",0);
@@ -2853,7 +2853,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"3c");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",0);
@@ -2884,7 +2884,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"4");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",0);
@@ -2915,7 +2915,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"199");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",0);
@@ -2944,7 +2944,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"399");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",1);
@@ -2972,7 +2972,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"400");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",1);
 		      expectedMap.put("2.2",0);
@@ -3000,7 +3000,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"Unknown");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",0);
@@ -3029,7 +3029,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"Vxoccant");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",0);
@@ -3061,7 +3061,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"vxoccpost");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",0);
@@ -3092,7 +3092,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"Breech");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",1);
@@ -3124,7 +3124,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"Face");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",1);
 		      expectedMap.put("2.2",0);
@@ -3156,7 +3156,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"Shoulder");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",0);
@@ -3188,7 +3188,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"Others");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",0);
@@ -3228,7 +3228,7 @@ public class DataPointTest {
 			  question2.setQuestion("question2");
 			  map.put(new QuestionIdentifier(question2.getId()),"1");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("1.1.1",0);
 		      expectedMap.put("1.1.2",0);
@@ -3264,7 +3264,7 @@ public class DataPointTest {
 			  question2.setQuestion("question2");
 			  map.put(new QuestionIdentifier(question2.getId()),"2");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("1.1.1",0);
 		      expectedMap.put("1.1.2",0);
@@ -3300,7 +3300,7 @@ public class DataPointTest {
 			  question2.setQuestion("question2");
 			  map.put(new QuestionIdentifier(question2.getId()),"4");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("1.1.1",0);
 		     
@@ -3330,7 +3330,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"9");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",0);
@@ -3358,7 +3358,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"10");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",0);
 		      expectedMap.put("2.2",1);
@@ -3386,7 +3386,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"31");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",1);
 		      expectedMap.put("2.2",0);
@@ -3414,7 +3414,7 @@ public class DataPointTest {
 			  question1.setMandatory(false);
 			  map.put(new QuestionIdentifier(question1.getId()),"31");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("3.3",1);
 		      expectedMap.put("2.2",0);
@@ -3450,7 +3450,7 @@ public class DataPointTest {
 			  question2.setQuestion("question2");
 			  map.put(new QuestionIdentifier(question2.getId()),"Normal");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("5.5.3",0);
 		      expectedMap.put("5.5.2",0);
@@ -3531,7 +3531,7 @@ public class DataPointTest {
 			  question2.setQuestion("question2");
 			  map.put(new QuestionIdentifier(question2.getId()),"Forcepsdelivery");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			 
 			  expectedMap.put("5.5.3",0);
@@ -3612,7 +3612,7 @@ public class DataPointTest {
 			  question2.setQuestion("question2");
 			  map.put(new QuestionIdentifier(question2.getId()),"Vacuumextraction");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			
 			  expectedMap.put("5.5.3",0);
@@ -3692,7 +3692,7 @@ public class DataPointTest {
 			  question2.setQuestion("question2");
 			  map.put(new QuestionIdentifier(question2.getId()),"Breech");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			 
 			  expectedMap.put("5.5.3",0);
@@ -3772,7 +3772,7 @@ public class DataPointTest {
 			  question2.setQuestion("question2");
 			  map.put(new QuestionIdentifier(question2.getId()),"Caesarean");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			
 			  expectedMap.put("5.5.3",0);
@@ -3851,7 +3851,7 @@ public class DataPointTest {
 			  question2.setQuestion("question2");
 			  map.put(new QuestionIdentifier(question2.getId()),"VBAC");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 			  expectedMap.put("5.5.3",0);
 		      expectedMap.put("5.5.2",0);
@@ -3931,7 +3931,7 @@ public class DataPointTest {
 			  question2.setQuestion("question2");
 			  map.put(new QuestionIdentifier(question2.getId()),"CS");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 		      
 			
@@ -3991,7 +3991,7 @@ public class DataPointTest {
 			  question2.setQuestion("question2");
 			  map.put(new QuestionIdentifier(question2.getId()),"CS");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 		      
 			
@@ -4051,7 +4051,7 @@ public class DataPointTest {
 			  question2.setQuestion("question2");
 			  map.put(new QuestionIdentifier(question2.getId()),"CS");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 		      
 		      expectedMap.put("2.2.1",0);
@@ -4106,7 +4106,7 @@ public class DataPointTest {
 			  question2.setQuestion("question2");
 			  map.put(new QuestionIdentifier(question2.getId()),"CS");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 		      
 		      expectedMap.put("2.2.1",0);
@@ -4161,7 +4161,7 @@ public class DataPointTest {
 			  question2.setQuestion("question2");
 			  map.put(new QuestionIdentifier(question2.getId()),"CS");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 		      
 		      expectedMap.put("2.2.1",0);
@@ -4218,7 +4218,7 @@ public class DataPointTest {
 			  question2.setQuestion("question2");
 			  map.put(new QuestionIdentifier(question2.getId()),"CS");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 		      
 		      expectedMap.put("2.2.1",0);
@@ -4273,7 +4273,7 @@ public class DataPointTest {
 			  question2.setQuestion("question2");
 			  map.put(new QuestionIdentifier(question2.getId()),"CS");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 		      
 		      expectedMap.put("2.2.1",0);
@@ -4328,7 +4328,7 @@ public class DataPointTest {
 			  question2.setQuestion("question2");
 			  map.put(new QuestionIdentifier(question2.getId()),"CS");
 			  Map<String,Integer> valueMap = dp.getValueMap(map);
-			  System.out.println(valueMap);
+			  //System.out.println(valueMap);
 			  Map<String, Integer> expectedMap = new HashMap<>();
 		      
 		      expectedMap.put("2.2.1",0);

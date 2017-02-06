@@ -67,8 +67,8 @@ public class SyncAuthenticationHandler implements SecurityFacade {
 			return false;
 		}
 		if (lock.getBranchId()!=credentials.getBranchId()){
-			System.out.println("Branch Id :"+lock.getBranchId() );
-			System.out.println("Branch Id :"+credentials.getBranchId() );
+			//System.out.println("Branch Id :"+lock.getBranchId() );
+			//System.out.println("Branch Id :"+credentials.getBranchId() );
 			return false;
 		}
 		if (lock.getMacId()==null ||credentials.getMacId()==null){
