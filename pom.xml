@@ -38,12 +38,13 @@
 			<version>1.2.17</version>
 		</dependency>
 
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework.version}</version>
-
 		</dependency>
+
 
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -106,7 +107,7 @@
 		</dependency>
 
 
-	
+
 
 		<dependency>
 			<groupId>mysql</groupId>
@@ -114,11 +115,32 @@
 			<version>5.1.6</version>
 		</dependency>
 
+		<!-- <dependency> <groupId>net.sf.jasperreports</groupId> <artifactId>jasperreports</artifactId> 
+			<version>4.0.2</version> </dependency> -->
+
+
 		<dependency>
 			<groupId>net.sf.jasperreports</groupId>
 			<artifactId>jasperreports</artifactId>
-			<version>4.0.2</version>
+			<version>6.4.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.fasterxml.jackson.core</groupId>
+					<artifactId>jackson-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.fasterxml.jackson.core</groupId>
+					<artifactId>jackson-annotations</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.fasterxml.jackson.core</groupId>
+					<artifactId>jackson-databind</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
+
+
+
 
 
 		<dependency>
@@ -128,20 +150,22 @@
 		</dependency>
 
 
-        <dependency>
+		<dependency>
 			<groupId>com.nv.platform</groupId>
 			<artifactId>nvJSON</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-        
-		
+
+
+
+
 		<dependency>
 			<groupId>com.amazonaws</groupId>
 			<artifactId>aws-java-sdk</artifactId>
 			<version>1.8.9.1</version>
 		</dependency>
-		
-		
+
+
 
 	</dependencies>
 

@@ -60,7 +60,6 @@ public class ReportHandler {
 		String toYear = (String) map.get("endYear");
 		String hospitalString = (String) map.get("hospital");
 		String datapoints= (String) map.get("datapoints");
-	
 		String[] hospitalArray = hospitalString.split(",");
 		Integer[] hospitalList=new Integer[hospitalArray.length]  ;
 		Integer hospital=0;
