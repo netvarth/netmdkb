@@ -115,10 +115,7 @@
 			<version>5.1.6</version>
 		</dependency>
 
-		<!-- <dependency> <groupId>net.sf.jasperreports</groupId> <artifactId>jasperreports</artifactId> 
-			<version>4.0.2</version> </dependency> -->
-
-
+	
 		<dependency>
 			<groupId>net.sf.jasperreports</groupId>
 			<artifactId>jasperreports</artifactId>
@@ -138,10 +135,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
-
-
-
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
