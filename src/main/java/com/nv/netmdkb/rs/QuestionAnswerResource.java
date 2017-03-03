@@ -26,21 +26,22 @@ import com.nv.netmdkb.rs.dto.SyncResponse;
 @Controller
 @RequestMapping("/qa")
 public class QuestionAnswerResource extends ServiceExceptionHandler{
-	
+
 	AnalyticService qaService;
-	
-	
+
+
 	@RequestMapping(value = "/{department}/{questionnareId}", method = RequestMethod.POST)
 	@ResponseBody
 	public CommonSyncResponse processQA(@RequestBody NetMdQuestionAnswerBundle questionAnswerBundle){
-	
-	ServletRequestAttributes t = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-	HttpServletRequest req = t.getRequest();
-	qaService.authenticateCredentials(questionAnswerBundle.getCredentials(), req);	
-	List<SyncResponse> response =qaService.processQuestionAnswerBatch(questionAnswerBundle);
-	CommonSyncResponse syncResponse = new CommonSyncResponse();
-	syncResponse.setResponses(response);
-	return syncResponse;	
+
+		ServletRequestAttributes t = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
+		HttpServletRequest req = t.getRequest();
+		qaService.authenticateCredentials(questionAnswerBundle.getCredentials(), req);	
+		List<SyncResponse> response =qaService.processQuestionAnswerBatch(questionAnswerBundle);
+		CommonSyncResponse syncResponse = new CommonSyncResponse();
+		syncResponse.setResponses(response);
+		return syncResponse;
+
 	}
 
 
@@ -49,30 +50,30 @@ public class QuestionAnswerResource extends ServiceExceptionHandler{
 	@ResponseBody
 	public Map<Integer,String> getNetmd(@PathVariable String questionnaireId){
 		Map<Integer,String> response =qaService.getHospitalList(questionnaireId);
-	return response;	
+		return response;	
 	}
-	
-	
+
+
 	@RequestMapping(value = "/datapoints/{questionnaireId}", method = RequestMethod.GET)
 	@ResponseBody
 	public Map<Integer,String> getFilterList(@PathVariable String questionnaireId){
-		
+
 		Map<Integer,String> response =qaService.getFilterList(questionnaireId);
-	
-	return response;	
+
+		return response;	
 	}
 	public AnalyticService getQaService() {
 		return qaService;
 	}
 
 
-	
-	
+
+
 	public void setQaService(AnalyticService qaService) {
 		this.qaService = qaService;
 	}
 
-	
-	
-	
+
+
+
 }
